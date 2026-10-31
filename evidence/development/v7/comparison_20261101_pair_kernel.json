@@ -1,0 +1,45 @@
+{
+  "outer_seed": 20261101,
+  "families": [
+    "pair_kernel"
+  ],
+  "records": [
+    {
+      "family": "pair_kernel",
+      "config": "rbf_c1",
+      "weight": 0.25,
+      "oof_correct": 1735,
+      "reference_correct": 1739,
+      "net_gain": -4,
+      "fold_delta": [
+        -3,
+        3,
+        -1,
+        -1,
+        -2
+      ],
+      "validation_hard": 313,
+      "validation_all": 756,
+      "validation_new_only": 4,
+      "validation_reference_only": 3,
+      "reference_scale": 0.8949364423751831,
+      "candidate_scale": 1.2910536527633667,
+      "added_asset_bytes": 2617402,
+      "total_asset_bytes": 4272652,
+      "passes": false
+    }
+  ],
+  "selected": null,
+  "reference": {
+    "oof": 1739,
+    "validation_hard": 312
+  },
+  "input_hashes": {
+    "D:\\7506\\mini_project_2\\project\\code\\runs\\v7\\reference20261101\\oof.npz": "f5fe5c6241d52d3904865c5007b4bbc85de093a67cbad42814a601160d059f4f",
+    "D:\\7506\\mini_project_2\\project\\code\\runs\\v7\\pair_kernel\\rbf_c1\\oof20261101.npz": "34553697b5334c318380b258eba2845af0e89b7ddafe55140a6d0eecc1df66ef",
+    "D:\\7506\\mini_project_2\\project\\code\\runs\\v7\\pair_kernel\\rbf_c1\\validation.npz": "0043b078bb65abcfbf5872f7c36f107f0582b644583c2398fa05e9a8c6c011df"
+  },
+  "test_accessed": false,
+  "scale_locked_to_first_oof": true,
+  "exploratory_followup": true
+}

@@ -1,0 +1,681 @@
+{
+  "frozen_at": "2026-10-31T18:16:45.774053+08:00",
+  "user_request": "V3-V8都测试一下呢",
+  "purpose": "One retrospective test comparison of six existing train/validation-selected representatives.",
+  "selection_rule": "Highest existing validation hard accuracy, ties by existing OOF then simpler fixed configuration; one per version.",
+  "test_results_used_for_training_tuning_or_model_selection": false,
+  "formal_submission_remains": "frozen V2; no automatic promotion based on these test results",
+  "no_retraining": true,
+  "no_test_error_analysis": true,
+  "threads_per_process": 4,
+  "fresh_processes": true,
+  "prediction_phase_before_any_new_scoring": true,
+  "models": {
+    "v3": {
+      "selection": {
+        "name": "group_linear_10_percent_plus_v3_reference",
+        "config": {
+          "candidate": "neural/group_linear",
+          "candidate_weight": 0.1,
+          "candidate_oof_scale": 1.262873888015747,
+          "group_pool": "max",
+          "reference_bundle": "D:\\7506\\mini_project_2\\project\\code\\runs\\v3_reference\\bundle",
+          "reference_weight": 0.9,
+          "learned_config": {
+            "config": {
+              "name": "group_linear",
+              "hidden": 0,
+              "dropout": 0.0,
+              "lr": 0.0003,
+              "wd": 0.3,
+              "residual_penalty": 0.1,
+              "spread": false,
+              "prior": "max",
+              "loss": "ce"
+            },
+            "epoch": 20,
+            "correct": 306
+          }
+        },
+        "validation_expected": {
+          "hard_correct": 311,
+          "hard_n": 355,
+          "all_correct": 754,
+          "all_n": 798
+        },
+        "oof_expected": {
+          "correct": 1744,
+          "n": 2114,
+          "fold_seed": 20261031
+        },
+        "selection_rule": "Highest recorded nonzero-candidate validation hard accuracy, then highest OOF; unique winner before complexity tie break.",
+        "candidate_assets": [
+          "D:\\7506\\mini_project_2\\project\\code\\runs\\v3_neural\\group_linear\\config.json",
+          "D:\\7506\\mini_project_2\\project\\code\\runs\\v3_neural\\group_linear\\weights.npz",
+          "D:\\7506\\mini_project_2\\project\\code\\runs\\v3_reference\\bundle\\ensemble.json",
+          "D:\\7506\\mini_project_2\\project\\code\\runs\\v3_reference\\bundle\\equations\\weights.npz",
+          "D:\\7506\\mini_project_2\\project\\code\\runs\\v3_reference\\bundle\\neural\\config.json",
+          "D:\\7506\\mini_project_2\\project\\code\\runs\\v3_reference\\bundle\\neural\\weights.npz",
+          "D:\\7506\\mini_project_2\\project\\code\\runs\\v3_reference\\bundle\\tree\\tree_config.json",
+          "D:\\7506\\mini_project_2\\project\\code\\runs\\v3_reference\\bundle\\tree\\tree_weights.npz"
+        ],
+        "source_files": [
+          "D:\\7506\\mini_project_2\\project\\code\\common.py",
+          "D:\\7506\\mini_project_2\\project\\code\\student_features.py",
+          "D:\\7506\\mini_project_2\\project\\code\\student_model.py",
+          "D:\\7506\\mini_project_2\\project\\code\\equation_features.py",
+          "D:\\7506\\mini_project_2\\project\\code\\ensemble_model.py",
+          "D:\\7506\\mini_project_2\\project\\code\\neural_model.py",
+          "D:\\7506\\mini_project_2\\project\\code\\tree_model.py",
+          "D:\\7506\\mini_project_2\\project\\code\\tree_features.py",
+          "D:\\7506\\mini_project_2\\project\\code\\experiments\\retrospective_v3_v4.py"
+        ],
+        "record_sources": [
+          "D:\\7506\\mini_project_2\\project\\code\\runs\\v3_decision\\fixed_comparison.json",
+          "D:\\7506\\mini_project_2\\project\\code\\experiments\\evaluate_v3_fixed.py",
+          "D:\\7506\\mini_project_2\\project\\code\\experiments\\v3_neural.py",
+          "D:\\7506\\mini_project_2\\project\\code\\runs\\v3_neural\\selection.json"
+        ],
+        "rebuilt": false,
+        "test_accessed_during_selection": false
+      },
+      "assets": [
+        "D:\\7506\\mini_project_2\\project\\code\\runs\\v3_neural\\group_linear\\config.json",
+        "D:\\7506\\mini_project_2\\project\\code\\runs\\v3_neural\\group_linear\\weights.npz",
+        "D:\\7506\\mini_project_2\\project\\code\\runs\\v3_reference\\bundle\\ensemble.json",
+        "D:\\7506\\mini_project_2\\project\\code\\runs\\v3_reference\\bundle\\equations\\weights.npz",
+        "D:\\7506\\mini_project_2\\project\\code\\runs\\v3_reference\\bundle\\neural\\config.json",
+        "D:\\7506\\mini_project_2\\project\\code\\runs\\v3_reference\\bundle\\neural\\weights.npz",
+        "D:\\7506\\mini_project_2\\project\\code\\runs\\v3_reference\\bundle\\tree\\tree_config.json",
+        "D:\\7506\\mini_project_2\\project\\code\\runs\\v3_reference\\bundle\\tree\\tree_weights.npz"
+      ],
+      "asset_uncompressed_bytes": 1691475,
+      "entry": "D:\\7506\\mini_project_2\\project\\code\\runs\\retrospective_test_20261031\\v3\\submission.py",
+      "verification": "D:\\7506\\mini_project_2\\project\\code\\runs\\retrospective_test_20261031\\v3\\verification.json"
+    },
+    "v4": {
+      "selection": {
+        "name": "unit_features_ridge_alpha3",
+        "config": {
+          "alpha": 3.0,
+          "equation_branch_replacement": 1.0,
+          "equation_branch_weight": 0.5,
+          "frozen_v2_bundle": "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle",
+          "learned_config": {
+            "alpha": 3.0,
+            "hard_correct": 309,
+            "all_correct": 752,
+            "eligible_for_cv": false,
+            "scale_ratio": 0.86513352394104
+          }
+        },
+        "validation_expected": {
+          "hard_correct": 309,
+          "hard_n": 355,
+          "all_correct": 752,
+          "all_n": 798
+        },
+        "oof_expected": null,
+        "selection_rule": "Highest validation hard accuracy is tied at alpha 0.3/1/3; no OOF exists for any. Stronger L2 alpha=3 is the lower effective-complexity choice with identical features.",
+        "candidate_assets": [
+          "D:\\7506\\mini_project_2\\project\\code\\runs\\v4_units\\alpha_3.0\\config.json",
+          "D:\\7506\\mini_project_2\\project\\code\\runs\\v4_units\\alpha_3.0\\weights.npz",
+          "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\ensemble.json",
+          "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\equations\\weights.npz",
+          "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\neural\\config.json",
+          "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\neural\\weights.npz",
+          "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\tree\\tree_config.json",
+          "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\tree\\tree_weights.npz"
+        ],
+        "source_files": [
+          "D:\\7506\\mini_project_2\\project\\code\\common.py",
+          "D:\\7506\\mini_project_2\\project\\code\\student_features.py",
+          "D:\\7506\\mini_project_2\\project\\code\\student_model.py",
+          "D:\\7506\\mini_project_2\\project\\code\\equation_features.py",
+          "D:\\7506\\mini_project_2\\project\\code\\ensemble_model.py",
+          "D:\\7506\\mini_project_2\\project\\code\\neural_model.py",
+          "D:\\7506\\mini_project_2\\project\\code\\tree_model.py",
+          "D:\\7506\\mini_project_2\\project\\code\\tree_features.py",
+          "D:\\7506\\mini_project_2\\project\\code\\experiments\\retrospective_v3_v4.py",
+          "D:\\7506\\mini_project_2\\project\\code\\unit_features_v4.py"
+        ],
+        "record_sources": [
+          "D:\\7506\\mini_project_2\\project\\code\\runs\\v4_decision\\summary.json",
+          "D:\\7506\\mini_project_2\\project\\code\\runs\\v4_units\\validation.json",
+          "D:\\7506\\mini_project_2\\project\\code\\experiments\\v4_units.py"
+        ],
+        "rebuilt": false,
+        "test_accessed_during_selection": false
+      },
+      "assets": [
+        "D:\\7506\\mini_project_2\\project\\code\\runs\\v4_units\\alpha_3.0\\config.json",
+        "D:\\7506\\mini_project_2\\project\\code\\runs\\v4_units\\alpha_3.0\\weights.npz",
+        "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\ensemble.json",
+        "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\equations\\weights.npz",
+        "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\neural\\config.json",
+        "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\neural\\weights.npz",
+        "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\tree\\tree_config.json",
+        "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\tree\\tree_weights.npz"
+      ],
+      "asset_uncompressed_bytes": 1664474,
+      "entry": "D:\\7506\\mini_project_2\\project\\code\\runs\\retrospective_test_20261031\\v4\\submission.py",
+      "verification": "D:\\7506\\mini_project_2\\project\\code\\runs\\retrospective_test_20261031\\v4\\verification.json"
+    },
+    "v5": {
+      "selection": {
+        "name": "V5b own small augmented attention, 25% blend with V2",
+        "config": {
+          "architecture": "small_aug",
+          "seed": 20261102,
+          "attention_weight": 0.25,
+          "v2_weight": 0.75,
+          "pooling": "mean",
+          "vote": 0.0,
+          "attention_scale": 0.24210914969444275,
+          "reference_scale": 0.9536036849021912
+        },
+        "validation_expected": {
+          "hard_correct": 311,
+          "hard_n": 355,
+          "all_correct": 754,
+          "n": 798
+        },
+        "oof_expected": {
+          "correct": 1739,
+          "n": 2114,
+          "fold_seed": 20261031
+        },
+        "candidate_assets": [
+          "D:\\7506\\mini_project_2\\project\\code\\runs\\v5b_attention\\small_aug\\seed20261102\\bundle\\weights.npz",
+          "D:\\7506\\mini_project_2\\project\\code\\runs\\v5b_attention\\small_aug\\seed20261102\\bundle\\config.json"
+        ],
+        "source_files": [
+          "D:\\7506\\mini_project_2\\project\\code\\experiments\\retrospective_v5_v6.py",
+          "D:\\7506\\mini_project_2\\project\\code\\common.py",
+          "D:\\7506\\mini_project_2\\project\\code\\student_features.py",
+          "D:\\7506\\mini_project_2\\project\\code\\student_model.py",
+          "D:\\7506\\mini_project_2\\project\\code\\equation_features.py",
+          "D:\\7506\\mini_project_2\\project\\code\\ensemble_model.py",
+          "D:\\7506\\mini_project_2\\project\\code\\neural_model.py",
+          "D:\\7506\\mini_project_2\\project\\code\\tree_model.py",
+          "D:\\7506\\mini_project_2\\project\\code\\tree_features.py",
+          "D:\\7506\\mini_project_2\\project\\code\\attention_model_v5.py"
+        ],
+        "record_sources": [
+          "D:\\7506\\mini_project_2\\project\\code\\runs\\v5_decision\\comparison_20261031_20261102.json",
+          "D:\\7506\\mini_project_2\\project\\code\\runs\\v5b_attention\\small_aug\\seed20261102\\validation.npz",
+          "D:\\7506\\mini_project_2\\project\\code\\experiments\\v5_attention.py",
+          "D:\\7506\\mini_project_2\\project\\code\\experiments\\evaluate_v5.py"
+        ],
+        "source_record": {
+          "config": "small_aug",
+          "seeds": [
+            20261102
+          ],
+          "weight": 0.25,
+          "oof_correct": 1739,
+          "oof_reference": 1741,
+          "net_gain": -2,
+          "fold_delta": [
+            -4,
+            5,
+            1,
+            -4,
+            0
+          ],
+          "validation_hard": 311,
+          "validation_all": 754,
+          "attention_scale": 0.24210914969444275,
+          "reference_scale": 0.9536036849021912,
+          "passes": false
+        },
+        "scope": "Own V5b implementation only. V5c copied-code internal reference is excluded.",
+        "selection_rule": "Highest recorded validation hard accuracy, then OOF accuracy, then simpler configuration",
+        "shared_base_assets": [
+          "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\ensemble.json",
+          "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\equations\\weights.npz",
+          "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\neural\\config.json",
+          "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\neural\\weights.npz",
+          "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\tree\\tree_config.json",
+          "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\tree\\tree_weights.npz"
+        ],
+        "retrained": false,
+        "new_test_accessed": false,
+        "note": "Retrospective representative, not a previously accepted replacement for V2."
+      },
+      "assets": [
+        "D:\\7506\\mini_project_2\\project\\code\\runs\\v5b_attention\\small_aug\\seed20261102\\bundle\\config.json",
+        "D:\\7506\\mini_project_2\\project\\code\\runs\\v5b_attention\\small_aug\\seed20261102\\bundle\\weights.npz",
+        "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\ensemble.json",
+        "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\equations\\weights.npz",
+        "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\neural\\config.json",
+        "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\neural\\weights.npz",
+        "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\tree\\tree_config.json",
+        "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\tree\\tree_weights.npz"
+      ],
+      "asset_uncompressed_bytes": 2804463,
+      "entry": "D:\\7506\\mini_project_2\\project\\code\\runs\\retrospective_test_20261031\\v5\\submission.py",
+      "verification": "D:\\7506\\mini_project_2\\project\\code\\runs\\retrospective_test_20261031\\v5\\verification.json"
+    },
+    "v6": {
+      "selection": {
+        "name": "V6b trajectory ridge alpha 3, replace half of V2 equation branch",
+        "config": {
+          "ridge_alpha": 3.0,
+          "equation_replacement_fraction": 0.5,
+          "equation_component_weight": 0.5,
+          "aggregation": "max",
+          "vote": 0.0
+        },
+        "validation_expected": {
+          "hard_correct": 311,
+          "hard_n": 355,
+          "all_correct": 754,
+          "n": 798
+        },
+        "oof_expected": {
+          "correct": 1749,
+          "n": 2114,
+          "fold_seed": 20261031
+        },
+        "candidate_assets": [
+          "D:\\7506\\mini_project_2\\project\\code\\runs\\v6b_trajectory\\alpha3.0\\weights.npz"
+        ],
+        "source_files": [
+          "D:\\7506\\mini_project_2\\project\\code\\experiments\\retrospective_v5_v6.py",
+          "D:\\7506\\mini_project_2\\project\\code\\common.py",
+          "D:\\7506\\mini_project_2\\project\\code\\student_features.py",
+          "D:\\7506\\mini_project_2\\project\\code\\student_model.py",
+          "D:\\7506\\mini_project_2\\project\\code\\equation_features.py",
+          "D:\\7506\\mini_project_2\\project\\code\\ensemble_model.py",
+          "D:\\7506\\mini_project_2\\project\\code\\neural_model.py",
+          "D:\\7506\\mini_project_2\\project\\code\\tree_model.py",
+          "D:\\7506\\mini_project_2\\project\\code\\tree_features.py",
+          "D:\\7506\\mini_project_2\\project\\code\\trajectory_features_v6.py"
+        ],
+        "record_sources": [
+          "D:\\7506\\mini_project_2\\project\\code\\runs\\v6b_trajectory\\comparison.json",
+          "D:\\7506\\mini_project_2\\project\\code\\runs\\v6b_trajectory\\validation.npz",
+          "D:\\7506\\mini_project_2\\project\\code\\experiments\\v6_trajectory.py"
+        ],
+        "source_record": {
+          "alpha": 3.0,
+          "replacement_fraction": 0.5,
+          "oof_correct": 1749,
+          "oof_reference": 1741,
+          "net_gain": 8,
+          "fold_delta": [
+            4,
+            4,
+            6,
+            -4,
+            -2
+          ],
+          "validation_hard": 311,
+          "validation_all": 754,
+          "passes": false
+        },
+        "scope": "Corrected V6b parser and original trained assets; no reconstruction needed.",
+        "selection_rule": "Highest recorded validation hard accuracy, then OOF accuracy, then simpler configuration",
+        "shared_base_assets": [
+          "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\ensemble.json",
+          "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\equations\\weights.npz",
+          "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\neural\\config.json",
+          "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\neural\\weights.npz",
+          "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\tree\\tree_config.json",
+          "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\tree\\tree_weights.npz"
+        ],
+        "retrained": false,
+        "new_test_accessed": false,
+        "note": "Retrospective representative, not a previously accepted replacement for V2."
+      },
+      "assets": [
+        "D:\\7506\\mini_project_2\\project\\code\\runs\\v6b_trajectory\\alpha3.0\\weights.npz",
+        "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\ensemble.json",
+        "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\equations\\weights.npz",
+        "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\neural\\config.json",
+        "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\neural\\weights.npz",
+        "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\tree\\tree_config.json",
+        "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\tree\\tree_weights.npz"
+      ],
+      "asset_uncompressed_bytes": 1664326,
+      "entry": "D:\\7506\\mini_project_2\\project\\code\\runs\\retrospective_test_20261031\\v6\\submission.py",
+      "verification": "D:\\7506\\mini_project_2\\project\\code\\runs\\retrospective_test_20261031\\v6\\verification.json"
+    },
+    "v7": {
+      "selection": {
+        "version": "V7",
+        "family": "pair_kernel",
+        "config": "rbf_c1",
+        "weight": 0.25,
+        "reference_scale": 0.8949364423751831,
+        "candidate_scale": 1.2910536527633667,
+        "selection_rule": "Highest validation_hard; ties by first-seed oof_correct, then smaller assets/weight",
+        "selection_basis": {
+          "family": "pair_kernel",
+          "config": "rbf_c1",
+          "weight": 0.25,
+          "oof_correct": 1749,
+          "reference_correct": 1741,
+          "net_gain": 8,
+          "fold_delta": [
+            -2,
+            7,
+            1,
+            1,
+            1
+          ],
+          "validation_hard": 313,
+          "validation_all": 756,
+          "validation_new_only": 4,
+          "validation_reference_only": 3,
+          "reference_scale": 0.8949364423751831,
+          "candidate_scale": 1.2910536527633667,
+          "added_asset_bytes": 2617402,
+          "total_asset_bytes": 4272652,
+          "passes": false
+        },
+        "second_seed_existing_result": {
+          "family": "pair_kernel",
+          "config": "rbf_c1",
+          "weight": 0.25,
+          "oof_correct": 1735,
+          "reference_correct": 1739,
+          "net_gain": -4,
+          "fold_delta": [
+            -3,
+            3,
+            -1,
+            -1,
+            -2
+          ],
+          "validation_hard": 313,
+          "validation_all": 756,
+          "validation_new_only": 4,
+          "validation_reference_only": 3,
+          "reference_scale": 0.8949364423751831,
+          "candidate_scale": 1.2910536527633667,
+          "added_asset_bytes": 2617402,
+          "total_asset_bytes": 4272652,
+          "passes": false
+        },
+        "prior_development_acceptance": "Rejected: first-stage gain below +10 and exploratory second-seed net gain -4",
+        "retrospective_only": true,
+        "parameters_changed": false,
+        "weights_retrained": false,
+        "source_paths": [
+          "D:\\7506\\mini_project_2\\project\\code\\experiments\\retrospective_v7.py",
+          "D:\\7506\\mini_project_2\\project\\code\\experiments\\v7_pair_kernel.py",
+          "D:\\7506\\mini_project_2\\project\\code\\ensemble_model.py",
+          "D:\\7506\\mini_project_2\\project\\code\\student_features.py",
+          "D:\\7506\\mini_project_2\\project\\code\\student_model.py",
+          "D:\\7506\\mini_project_2\\project\\code\\equation_features.py",
+          "D:\\7506\\mini_project_2\\project\\code\\neural_model.py",
+          "D:\\7506\\mini_project_2\\project\\code\\tree_features.py",
+          "D:\\7506\\mini_project_2\\project\\code\\tree_model.py",
+          "D:\\7506\\mini_project_2\\project\\code\\common.py"
+        ],
+        "asset_paths": [
+          "D:\\7506\\mini_project_2\\project\\code\\runs\\v7\\pair_kernel\\rbf_c1\\full\\bundle\\config.json",
+          "D:\\7506\\mini_project_2\\project\\code\\runs\\v7\\pair_kernel\\rbf_c1\\full\\bundle\\weights.npz",
+          "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\ensemble.json",
+          "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\equations\\weights.npz",
+          "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\neural\\config.json",
+          "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\neural\\weights.npz",
+          "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\tree\\tree_config.json",
+          "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\tree\\tree_weights.npz"
+        ],
+        "source_sha256": {
+          "D:\\7506\\mini_project_2\\project\\code\\experiments\\retrospective_v7.py": "14f89ca41a0e96ed5e73818699d390292eb8526aee0bbf1d5ebd76cbba12eb92",
+          "D:\\7506\\mini_project_2\\project\\code\\experiments\\v7_pair_kernel.py": "c9c35f214293850c6f54afabfc57789a258b40cbf9a3b2071f1fbc2493d342a1",
+          "D:\\7506\\mini_project_2\\project\\code\\ensemble_model.py": "7da54bc4f225c895775f415891261ad5f1bc1febecaab43faefaeaf7fe470516",
+          "D:\\7506\\mini_project_2\\project\\code\\student_features.py": "d7b993b63058c0b9a9d01dbc2ae38904fa462df91176b0a81e519ad6d3e2963b",
+          "D:\\7506\\mini_project_2\\project\\code\\student_model.py": "7aa913b107639bc81466ffb45f34e474b1913947a1d1f85da0316c828182b170",
+          "D:\\7506\\mini_project_2\\project\\code\\equation_features.py": "cd94b9b390023015a1383cc43c869d3005dc559f9503e4331f10763c2e3e7317",
+          "D:\\7506\\mini_project_2\\project\\code\\neural_model.py": "41aab91f060f235151955b448383bc545533b12e481bf678489dd04c07360485",
+          "D:\\7506\\mini_project_2\\project\\code\\tree_features.py": "782ddab9a77d333537316077a14db51116e9bfa1b98d65c73cc8c6005ebfa7d2",
+          "D:\\7506\\mini_project_2\\project\\code\\tree_model.py": "857b253572e31e4e02f3541f5d2a10585d70f6e584f68b79a3ed7cc214b35d63",
+          "D:\\7506\\mini_project_2\\project\\code\\common.py": "aecd10f7ff2e9e82ac5673d34d576e122caac51d2caaa7c7a8aa05906da51f6c"
+        },
+        "asset_sha256": {
+          "D:\\7506\\mini_project_2\\project\\code\\runs\\v7\\pair_kernel\\rbf_c1\\full\\bundle\\config.json": "f586f07f82b7b5ee4280aa4fdf721c8ba200584b82dff1d695697a6d80cd80bc",
+          "D:\\7506\\mini_project_2\\project\\code\\runs\\v7\\pair_kernel\\rbf_c1\\full\\bundle\\weights.npz": "5d73123fbbed0de0f1eeff68c797cde6a5230add7a1320c4b6488bfb49cd52e2",
+          "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\ensemble.json": "6a17926f2916354f9b63ccfbfb679128eb302d0ab252e036aea66b7b346ff793",
+          "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\equations\\weights.npz": "e6d30c2b059743c18f013d580fbfd9c19a6cd8492d544c0e8d5313b652c0142f",
+          "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\neural\\config.json": "7f91ce85a8a0e659fbe1177b6f825d843aff9e76a729d22347eac4842c2dac02",
+          "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\neural\\weights.npz": "5020d64f7b51523aad23d7ce0811ad6dc98b53ccaa4df0f6971fe9aab7a1aaaa",
+          "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\tree\\tree_config.json": "ce9142d7f863795d44cc779c1e676df8bc2a9f3e82e8f9d37711eb4b03d98547",
+          "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\tree\\tree_weights.npz": "78abf4241a0a7a0f8099d8ebd60695d8e4f0e5664c059a8431583f9313202eaa"
+        },
+        "evidence_paths": [
+          "D:\\7506\\mini_project_2\\project\\code\\runs\\v7\\comparison_20261031_group_tree-pair_kernel-gate.json",
+          "D:\\7506\\mini_project_2\\project\\code\\runs\\v7\\comparison_20261101_pair_kernel.json",
+          "D:\\7506\\mini_project_2\\project\\code\\runs\\v7\\exploratory_followup.json",
+          "D:\\7506\\mini_project_2\\project\\code\\runs\\v7\\protocol.json",
+          "D:\\7506\\mini_project_2\\project\\code\\runs\\v7\\pair_kernel\\rbf_c1\\full\\signature.json",
+          "D:\\7506\\mini_project_2\\project\\code\\runs\\v7\\pair_kernel\\rbf_c1\\validation.json",
+          "D:\\7506\\mini_project_2\\project\\code\\runs\\v7\\pair_kernel\\rbf_c1\\validation.npz"
+        ],
+        "evidence_sha256": {
+          "D:\\7506\\mini_project_2\\project\\code\\runs\\v7\\comparison_20261031_group_tree-pair_kernel-gate.json": "c4828547686e927cb12a05297c2f1c4180c877fd5ded93e59f13c85366cdd81a",
+          "D:\\7506\\mini_project_2\\project\\code\\runs\\v7\\comparison_20261101_pair_kernel.json": "f46204da6fefa54f9a2413261fc76b9c43232cee5342e160c38ca0fdd5bf5f0f",
+          "D:\\7506\\mini_project_2\\project\\code\\runs\\v7\\exploratory_followup.json": "30ad15d00c2820d1540a8baacfdd05deb94398f7cbc4888715a2b0d2c56747cd",
+          "D:\\7506\\mini_project_2\\project\\code\\runs\\v7\\protocol.json": "14b36cfb03190ba1ce1c839fc3dd145d7c53fc4d36795374675ce5f8d436985a",
+          "D:\\7506\\mini_project_2\\project\\code\\runs\\v7\\pair_kernel\\rbf_c1\\full\\signature.json": "20fbba979016b2d30d69c7eeb017acf3819e517d698fe053f0380eadfd9ba90b",
+          "D:\\7506\\mini_project_2\\project\\code\\runs\\v7\\pair_kernel\\rbf_c1\\validation.json": "d32114d6bd503251f286d701c09750f5d6a911fb1cf35c7af2c71bb8a21e9074",
+          "D:\\7506\\mini_project_2\\project\\code\\runs\\v7\\pair_kernel\\rbf_c1\\validation.npz": "0043b078bb65abcfbf5872f7c36f107f0582b644583c2398fa05e9a8c6c011df"
+        },
+        "test_information_used_for_selection": false
+      },
+      "assets": [
+        "D:\\7506\\mini_project_2\\project\\code\\runs\\v7\\pair_kernel\\rbf_c1\\full\\bundle\\config.json",
+        "D:\\7506\\mini_project_2\\project\\code\\runs\\v7\\pair_kernel\\rbf_c1\\full\\bundle\\weights.npz",
+        "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\ensemble.json",
+        "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\equations\\weights.npz",
+        "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\neural\\config.json",
+        "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\neural\\weights.npz",
+        "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\tree\\tree_config.json",
+        "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\tree\\tree_weights.npz"
+      ],
+      "asset_uncompressed_bytes": 4272652,
+      "entry": "D:\\7506\\mini_project_2\\project\\code\\runs\\retrospective_test_20261031\\v7\\submission.py",
+      "verification": "D:\\7506\\mini_project_2\\project\\code\\runs\\retrospective_test_20261031\\v7\\validation_check.json"
+    },
+    "v8": {
+      "selection": {
+        "name": "nested_pair4_stack",
+        "config": {
+          "name": "pair4",
+          "weight": 1,
+          "oof_correct": 1756,
+          "oof_reference": 1741,
+          "net_gain": 15,
+          "fold_delta": [
+            1,
+            4,
+            6,
+            -1,
+            5
+          ],
+          "validation_hard": 313,
+          "validation_all": 756,
+          "validation_fixed": 8,
+          "validation_regressed": 7,
+          "candidate_scale": 0.2744070887565613,
+          "reference_scale": 0.8949364423751831,
+          "added_asset_bytes": 254389,
+          "total_asset_bytes": 1909639,
+          "passes": true
+        },
+        "validation_expected": {
+          "hard_correct": 313,
+          "hard_n": 355,
+          "all_correct": 756,
+          "n": 798
+        },
+        "selection_rule": "Previously locked first-stage selected candidate; also highest validation and OOF among tied V8 configurations.",
+        "prior_development_acceptance": "Not promoted: second seed has positive aggregate gain but only two positive folds.",
+        "candidate_assets": [
+          "D:\\7506\\mini_project_2\\project\\code\\runs\\v8\\candidate_bundle\\pair4\\cat_config.json",
+          "D:\\7506\\mini_project_2\\project\\code\\runs\\v8\\candidate_bundle\\pair4\\cat_weights.npz",
+          "D:\\7506\\mini_project_2\\project\\code\\runs\\v8\\candidate_bundle\\pair4\\projection.npz",
+          "D:\\7506\\mini_project_2\\project\\code\\runs\\v8\\candidate_bundle\\stack_config.json",
+          "D:\\7506\\mini_project_2\\project\\code\\runs\\v8\\candidate_bundle\\v2\\ensemble.json",
+          "D:\\7506\\mini_project_2\\project\\code\\runs\\v8\\candidate_bundle\\v2\\equations\\weights.npz",
+          "D:\\7506\\mini_project_2\\project\\code\\runs\\v8\\candidate_bundle\\v2\\neural\\config.json",
+          "D:\\7506\\mini_project_2\\project\\code\\runs\\v8\\candidate_bundle\\v2\\neural\\weights.npz",
+          "D:\\7506\\mini_project_2\\project\\code\\runs\\v8\\candidate_bundle\\v2\\tree\\tree_config.json",
+          "D:\\7506\\mini_project_2\\project\\code\\runs\\v8\\candidate_bundle\\v2\\tree\\tree_weights.npz"
+        ],
+        "source_files": [
+          "D:\\7506\\mini_project_2\\project\\code\\v8_stack_model.py",
+          "D:\\7506\\mini_project_2\\project\\code\\v8_stack_features.py",
+          "D:\\7506\\mini_project_2\\project\\code\\v8_cat_numeric.py",
+          "D:\\7506\\mini_project_2\\project\\code\\trajectory_features_v6.py",
+          "D:\\7506\\mini_project_2\\project\\code\\common.py",
+          "D:\\7506\\mini_project_2\\project\\code\\student_features.py",
+          "D:\\7506\\mini_project_2\\project\\code\\student_model.py",
+          "D:\\7506\\mini_project_2\\project\\code\\equation_features.py",
+          "D:\\7506\\mini_project_2\\project\\code\\neural_model.py",
+          "D:\\7506\\mini_project_2\\project\\code\\tree_features.py",
+          "D:\\7506\\mini_project_2\\project\\code\\tree_model.py",
+          "D:\\7506\\mini_project_2\\project\\code\\ensemble_model.py"
+        ],
+        "record_sources": [
+          "D:\\7506\\mini_project_2\\project\\code\\runs\\v8\\comparison.json",
+          "D:\\7506\\mini_project_2\\project\\code\\runs\\v8\\second_seed\\comparison.json",
+          "D:\\7506\\mini_project_2\\project\\code\\runs\\v8\\candidate_hashes.json",
+          "D:\\7506\\mini_project_2\\project\\code\\runs\\v8\\protocol.json"
+        ],
+        "weights_retrained": false,
+        "test_information_used_for_selection": false
+      },
+      "assets": [
+        "D:\\7506\\mini_project_2\\project\\code\\runs\\v8\\candidate_bundle\\pair4\\cat_config.json",
+        "D:\\7506\\mini_project_2\\project\\code\\runs\\v8\\candidate_bundle\\pair4\\cat_weights.npz",
+        "D:\\7506\\mini_project_2\\project\\code\\runs\\v8\\candidate_bundle\\pair4\\projection.npz",
+        "D:\\7506\\mini_project_2\\project\\code\\runs\\v8\\candidate_bundle\\stack_config.json",
+        "D:\\7506\\mini_project_2\\project\\code\\runs\\v8\\candidate_bundle\\v2\\ensemble.json",
+        "D:\\7506\\mini_project_2\\project\\code\\runs\\v8\\candidate_bundle\\v2\\equations\\weights.npz",
+        "D:\\7506\\mini_project_2\\project\\code\\runs\\v8\\candidate_bundle\\v2\\neural\\config.json",
+        "D:\\7506\\mini_project_2\\project\\code\\runs\\v8\\candidate_bundle\\v2\\neural\\weights.npz",
+        "D:\\7506\\mini_project_2\\project\\code\\runs\\v8\\candidate_bundle\\v2\\tree\\tree_config.json",
+        "D:\\7506\\mini_project_2\\project\\code\\runs\\v8\\candidate_bundle\\v2\\tree\\tree_weights.npz"
+      ],
+      "asset_uncompressed_bytes": 1910314,
+      "entry": "D:\\7506\\mini_project_2\\project\\code\\runs\\retrospective_test_20261031\\v8\\submission.py",
+      "verification": "D:\\7506\\mini_project_2\\project\\code\\runs\\retrospective_test_20261031\\v8\\verification.json"
+    }
+  },
+  "files_sha256": {
+    "D:\\7506\\mini_project_2\\project\\code\\attention_model_v5.py": "774ac4435179e5941712a85fae3f406561d8c4b9f3812273fb748e883e3f9cf0",
+    "D:\\7506\\mini_project_2\\project\\code\\common.py": "aecd10f7ff2e9e82ac5673d34d576e122caac51d2caaa7c7a8aa05906da51f6c",
+    "D:\\7506\\mini_project_2\\project\\code\\ensemble_model.py": "7da54bc4f225c895775f415891261ad5f1bc1febecaab43faefaeaf7fe470516",
+    "D:\\7506\\mini_project_2\\project\\code\\equation_features.py": "cd94b9b390023015a1383cc43c869d3005dc559f9503e4331f10763c2e3e7317",
+    "D:\\7506\\mini_project_2\\project\\code\\experiments\\evaluate_v3_fixed.py": "b37f730b54ea690fc5c098f122822b03f6bbefbc952dd2ca137540f17a1c8f3e",
+    "D:\\7506\\mini_project_2\\project\\code\\experiments\\evaluate_v5.py": "d15ffd81c3a7d65c78ba47ee0880fbaeff3a97225d38ae3f260709c34b0dc68c",
+    "D:\\7506\\mini_project_2\\project\\code\\experiments\\retrospective_test_review.py": "68761c7c6923c77b64eb747bba0f5ce9b5fa71829ad74a3d9aa3850f5fcc7f84",
+    "D:\\7506\\mini_project_2\\project\\code\\experiments\\retrospective_v3_v4.py": "5fc8d51b7ce99970ce56297420d807835a3b2aaa1764eb52c351d26c85b6524e",
+    "D:\\7506\\mini_project_2\\project\\code\\experiments\\retrospective_v5_v6.py": "cc1b9f4c1bce0d84bfdf288cc070c793c537b8ffb5378fe5fd62f29787a7455f",
+    "D:\\7506\\mini_project_2\\project\\code\\experiments\\retrospective_v7.py": "14f89ca41a0e96ed5e73818699d390292eb8526aee0bbf1d5ebd76cbba12eb92",
+    "D:\\7506\\mini_project_2\\project\\code\\experiments\\v3_neural.py": "bb3b4c984b6567ecdffbe27e6a1a43c485bc22ce51615056b95c1832996ea94a",
+    "D:\\7506\\mini_project_2\\project\\code\\experiments\\v4_units.py": "a54ed58d4ffb7ca48119a610aff0748116c1c96fde296971845a75dfd8768bb7",
+    "D:\\7506\\mini_project_2\\project\\code\\experiments\\v5_attention.py": "1394a9bf4b92114120e9567f5fe3512b65c9d3ee1ae36c0ae6b6815c99e603e2",
+    "D:\\7506\\mini_project_2\\project\\code\\experiments\\v6_trajectory.py": "bc231150b085251ea9b5931045f848d8fb8824ce0fde2eba58afb972d55570cd",
+    "D:\\7506\\mini_project_2\\project\\code\\experiments\\v7_pair_kernel.py": "c9c35f214293850c6f54afabfc57789a258b40cbf9a3b2071f1fbc2493d342a1",
+    "D:\\7506\\mini_project_2\\project\\code\\neural_model.py": "41aab91f060f235151955b448383bc545533b12e481bf678489dd04c07360485",
+    "D:\\7506\\mini_project_2\\project\\code\\predict.py": "e7a627fbdc9ef8d4ab3189a6fa5ac02d56ae703ccd1a81507aea0bd66e042162",
+    "D:\\7506\\mini_project_2\\project\\code\\runs\\retrospective_test_20261031\\v3\\submission.py": "d5d3a789efc81db8af06003bbbbd000ac400b49d5c3390dc5d2414a30c72d8da",
+    "D:\\7506\\mini_project_2\\project\\code\\runs\\retrospective_test_20261031\\v3\\verification.json": "8d3c06b19865559f4823fb5b1edf411eb4071909106984f2fc139f3eee247c8e",
+    "D:\\7506\\mini_project_2\\project\\code\\runs\\retrospective_test_20261031\\v4\\submission.py": "bb6613fa9caaa3ca86bcd157e0ee94d9ebf00b57c4eeffa70ec6cba336901e80",
+    "D:\\7506\\mini_project_2\\project\\code\\runs\\retrospective_test_20261031\\v4\\verification.json": "5e6c6407288eea58ac4e73510887cfa1a575b9388b35b882e07fad4f02d03c61",
+    "D:\\7506\\mini_project_2\\project\\code\\runs\\retrospective_test_20261031\\v5\\submission.py": "225211cae965f86f738484d79ce9fd4f59cd8973bf4ae1eb8239459f3bced120",
+    "D:\\7506\\mini_project_2\\project\\code\\runs\\retrospective_test_20261031\\v5\\verification.json": "44372839253d5783590e8eba417dd06a958b33cc699478112f6cdb8e215ce34c",
+    "D:\\7506\\mini_project_2\\project\\code\\runs\\retrospective_test_20261031\\v6\\submission.py": "be537874b2578878e1b9c7cf89c63548cbd22c0a86fa3d90174472ddffa2b15f",
+    "D:\\7506\\mini_project_2\\project\\code\\runs\\retrospective_test_20261031\\v6\\verification.json": "1a1ccf0ea6276510f78f6ba5622ca1804bddbee061a93031677c6ad414a36954",
+    "D:\\7506\\mini_project_2\\project\\code\\runs\\retrospective_test_20261031\\v7\\submission.py": "72ad223b18d68b2f2f8cdbf32dcc277d67f1baa0159ec95289993bbcab705983",
+    "D:\\7506\\mini_project_2\\project\\code\\runs\\retrospective_test_20261031\\v7\\validation_check.json": "812a0fb3cff0f68cfb78354f6dbf0401477babff59c1c161e2a74a495e5e2613",
+    "D:\\7506\\mini_project_2\\project\\code\\runs\\retrospective_test_20261031\\v8\\submission.py": "094b7b2750b516d6d76b8a300986079ec23e543d92cd403849bbb53a6b199574",
+    "D:\\7506\\mini_project_2\\project\\code\\runs\\retrospective_test_20261031\\v8\\verification.json": "abc834b3965947c5c01daf1e645a7eb4b29e9128d3d1444d5f2e6942eefa0ba5",
+    "D:\\7506\\mini_project_2\\project\\code\\runs\\v3_decision\\fixed_comparison.json": "1553ff2e21221b5dc3a02524444d7752a74b358444fafc24d932d09af2ce13a7",
+    "D:\\7506\\mini_project_2\\project\\code\\runs\\v3_neural\\group_linear\\config.json": "6d01c61c8d4d8a831f6abf54f6bc139d6c13cc20d6a1e0139db01cac95a69424",
+    "D:\\7506\\mini_project_2\\project\\code\\runs\\v3_neural\\group_linear\\weights.npz": "5c4a343bd62ee589f48eb5f02ceacf0837f731ca3463c9589c0d674401e8effe",
+    "D:\\7506\\mini_project_2\\project\\code\\runs\\v3_neural\\selection.json": "1e21892c7cb20cb2a0f90a84cdee3269ebabc17a97a029f4b3dab25e291e9147",
+    "D:\\7506\\mini_project_2\\project\\code\\runs\\v3_reference\\bundle\\ensemble.json": "a2ce8dcb898954783f395b904c8ba71fd10ed5c11f88444ee8dd217053c3054b",
+    "D:\\7506\\mini_project_2\\project\\code\\runs\\v3_reference\\bundle\\equations\\weights.npz": "e6d30c2b059743c18f013d580fbfd9c19a6cd8492d544c0e8d5313b652c0142f",
+    "D:\\7506\\mini_project_2\\project\\code\\runs\\v3_reference\\bundle\\neural\\config.json": "3cbbf7be4179782f1e3278c12c210dc9e9825379ea1336df942408f5918e7f83",
+    "D:\\7506\\mini_project_2\\project\\code\\runs\\v3_reference\\bundle\\neural\\weights.npz": "5020d64f7b51523aad23d7ce0811ad6dc98b53ccaa4df0f6971fe9aab7a1aaaa",
+    "D:\\7506\\mini_project_2\\project\\code\\runs\\v3_reference\\bundle\\tree\\tree_config.json": "ce9142d7f863795d44cc779c1e676df8bc2a9f3e82e8f9d37711eb4b03d98547",
+    "D:\\7506\\mini_project_2\\project\\code\\runs\\v3_reference\\bundle\\tree\\tree_weights.npz": "78abf4241a0a7a0f8099d8ebd60695d8e4f0e5664c059a8431583f9313202eaa",
+    "D:\\7506\\mini_project_2\\project\\code\\runs\\v4_decision\\summary.json": "fac3de4640e90c02f7ba58253d10d912ef4e575c57cbf227b6b2109cd26d2382",
+    "D:\\7506\\mini_project_2\\project\\code\\runs\\v4_units\\alpha_3.0\\config.json": "eb71f0abfc86a3ed7741e7215c8f2b3546e1bac1377607398930d37130de1248",
+    "D:\\7506\\mini_project_2\\project\\code\\runs\\v4_units\\alpha_3.0\\weights.npz": "54b4c67d1e55039b520d7bc0d5426e5b92ddd5a0062c5f6f4aa43d1b23d4f2f4",
+    "D:\\7506\\mini_project_2\\project\\code\\runs\\v4_units\\validation.json": "3c85e387555b2ac4782cdf3508dfb12f118d7f4e1dffd7f91717cde8c333f7e7",
+    "D:\\7506\\mini_project_2\\project\\code\\runs\\v5_decision\\comparison_20261031_20261102.json": "7a62f2f0c1bd98d9ea509433f17ab2caf6789dd9d100319726e31f1fc5f47ed7",
+    "D:\\7506\\mini_project_2\\project\\code\\runs\\v5b_attention\\small_aug\\seed20261102\\bundle\\config.json": "4dd2feafc21709b7d4c48cc623d9f6d5e412fc9360eed7ab841960c2357dc097",
+    "D:\\7506\\mini_project_2\\project\\code\\runs\\v5b_attention\\small_aug\\seed20261102\\bundle\\weights.npz": "8580e6de020371bb512877400c163f61d1fef24503eddd363f10fc991b9733be",
+    "D:\\7506\\mini_project_2\\project\\code\\runs\\v5b_attention\\small_aug\\seed20261102\\validation.npz": "3514aa0523eb5386a1e1687cf9df738af157023e53b5a012ed64e4ad324a2a7c",
+    "D:\\7506\\mini_project_2\\project\\code\\runs\\v6b_trajectory\\alpha3.0\\weights.npz": "f88bfc0f55763c5f85c370e4d25a78c0ea64db276b8a033677d694c853c18f96",
+    "D:\\7506\\mini_project_2\\project\\code\\runs\\v6b_trajectory\\comparison.json": "e2383e609a753b17dd35d2e93817842d5b15d0637c6177ee095bfe34c9a81afd",
+    "D:\\7506\\mini_project_2\\project\\code\\runs\\v6b_trajectory\\validation.npz": "46291f054ca916b64bc199cbac9aaf487e93d964519503f15998b3b6c49829d2",
+    "D:\\7506\\mini_project_2\\project\\code\\runs\\v7\\comparison_20261031_group_tree-pair_kernel-gate.json": "c4828547686e927cb12a05297c2f1c4180c877fd5ded93e59f13c85366cdd81a",
+    "D:\\7506\\mini_project_2\\project\\code\\runs\\v7\\comparison_20261101_pair_kernel.json": "f46204da6fefa54f9a2413261fc76b9c43232cee5342e160c38ca0fdd5bf5f0f",
+    "D:\\7506\\mini_project_2\\project\\code\\runs\\v7\\exploratory_followup.json": "30ad15d00c2820d1540a8baacfdd05deb94398f7cbc4888715a2b0d2c56747cd",
+    "D:\\7506\\mini_project_2\\project\\code\\runs\\v7\\pair_kernel\\rbf_c1\\full\\bundle\\config.json": "f586f07f82b7b5ee4280aa4fdf721c8ba200584b82dff1d695697a6d80cd80bc",
+    "D:\\7506\\mini_project_2\\project\\code\\runs\\v7\\pair_kernel\\rbf_c1\\full\\bundle\\weights.npz": "5d73123fbbed0de0f1eeff68c797cde6a5230add7a1320c4b6488bfb49cd52e2",
+    "D:\\7506\\mini_project_2\\project\\code\\runs\\v7\\pair_kernel\\rbf_c1\\full\\signature.json": "20fbba979016b2d30d69c7eeb017acf3819e517d698fe053f0380eadfd9ba90b",
+    "D:\\7506\\mini_project_2\\project\\code\\runs\\v7\\pair_kernel\\rbf_c1\\validation.json": "d32114d6bd503251f286d701c09750f5d6a911fb1cf35c7af2c71bb8a21e9074",
+    "D:\\7506\\mini_project_2\\project\\code\\runs\\v7\\pair_kernel\\rbf_c1\\validation.npz": "0043b078bb65abcfbf5872f7c36f107f0582b644583c2398fa05e9a8c6c011df",
+    "D:\\7506\\mini_project_2\\project\\code\\runs\\v7\\protocol.json": "14b36cfb03190ba1ce1c839fc3dd145d7c53fc4d36795374675ce5f8d436985a",
+    "D:\\7506\\mini_project_2\\project\\code\\runs\\v8\\candidate_bundle\\pair4\\cat_config.json": "3ef0963a9c449c163fcd231c2de5257467f0cf35a46ec52f66581c744ce1a82e",
+    "D:\\7506\\mini_project_2\\project\\code\\runs\\v8\\candidate_bundle\\pair4\\cat_weights.npz": "d249a6f88f63ee68142859ee0305451f3af52e0ff6a201482a78b88bcce6d673",
+    "D:\\7506\\mini_project_2\\project\\code\\runs\\v8\\candidate_bundle\\pair4\\projection.npz": "f425708cd7c961791a11ba9da29fc7f97b62bc8f72094686329473a25c4f57f0",
+    "D:\\7506\\mini_project_2\\project\\code\\runs\\v8\\candidate_bundle\\stack_config.json": "653a4d6db68159b5def41f036d4912bad7be15f11cd98a72d41c76c1bbbc6801",
+    "D:\\7506\\mini_project_2\\project\\code\\runs\\v8\\candidate_bundle\\v2\\ensemble.json": "6a17926f2916354f9b63ccfbfb679128eb302d0ab252e036aea66b7b346ff793",
+    "D:\\7506\\mini_project_2\\project\\code\\runs\\v8\\candidate_bundle\\v2\\equations\\weights.npz": "e6d30c2b059743c18f013d580fbfd9c19a6cd8492d544c0e8d5313b652c0142f",
+    "D:\\7506\\mini_project_2\\project\\code\\runs\\v8\\candidate_bundle\\v2\\neural\\config.json": "7f91ce85a8a0e659fbe1177b6f825d843aff9e76a729d22347eac4842c2dac02",
+    "D:\\7506\\mini_project_2\\project\\code\\runs\\v8\\candidate_bundle\\v2\\neural\\weights.npz": "5020d64f7b51523aad23d7ce0811ad6dc98b53ccaa4df0f6971fe9aab7a1aaaa",
+    "D:\\7506\\mini_project_2\\project\\code\\runs\\v8\\candidate_bundle\\v2\\tree\\tree_config.json": "ce9142d7f863795d44cc779c1e676df8bc2a9f3e82e8f9d37711eb4b03d98547",
+    "D:\\7506\\mini_project_2\\project\\code\\runs\\v8\\candidate_bundle\\v2\\tree\\tree_weights.npz": "78abf4241a0a7a0f8099d8ebd60695d8e4f0e5664c059a8431583f9313202eaa",
+    "D:\\7506\\mini_project_2\\project\\code\\runs\\v8\\candidate_hashes.json": "d41b33c2084e6664897ed00f6bbfbf379f9cc1d858e956292f18fda54ec7ec0d",
+    "D:\\7506\\mini_project_2\\project\\code\\runs\\v8\\comparison.json": "706762db4ef41cdbf7d34eac9237d04435d86b30b1c1384811484b9a9e900e58",
+    "D:\\7506\\mini_project_2\\project\\code\\runs\\v8\\protocol.json": "cd37c6edbb374a25918c72fc46a0aa56a6c524f42a85f2fb1ea72c333fbbcdc1",
+    "D:\\7506\\mini_project_2\\project\\code\\runs\\v8\\second_seed\\comparison.json": "93ee41bccfd7da1eab86e83acc597106bd7012a47cd6d2f422ab2febc915a35d",
+    "D:\\7506\\mini_project_2\\project\\code\\score_predictions.py": "fe12b809b82117aea722e5dfef7a55a88950a7cf50c49ec2ea007ea847959960",
+    "D:\\7506\\mini_project_2\\project\\code\\student_features.py": "d7b993b63058c0b9a9d01dbc2ae38904fa462df91176b0a81e519ad6d3e2963b",
+    "D:\\7506\\mini_project_2\\project\\code\\student_model.py": "7aa913b107639bc81466ffb45f34e474b1913947a1d1f85da0316c828182b170",
+    "D:\\7506\\mini_project_2\\project\\code\\trajectory_features_v6.py": "5e337fe1dd6302f7d094ed24c26904f0f7d4db0782e1776a52f34b4500472c13",
+    "D:\\7506\\mini_project_2\\project\\code\\tree_features.py": "782ddab9a77d333537316077a14db51116e9bfa1b98d65c73cc8c6005ebfa7d2",
+    "D:\\7506\\mini_project_2\\project\\code\\tree_model.py": "857b253572e31e4e02f3541f5d2a10585d70f6e584f68b79a3ed7cc214b35d63",
+    "D:\\7506\\mini_project_2\\project\\code\\unit_features_v4.py": "5217ece391c43a407966d00a2666b2a6226c6e27357dad9310f033eb11c7df73",
+    "D:\\7506\\mini_project_2\\project\\code\\v8_cat_numeric.py": "d149f62b8f616a177babb2e8795fef216835cf2d0cbfade8c8a247b26ce67d98",
+    "D:\\7506\\mini_project_2\\project\\code\\v8_stack_features.py": "dc00a95ed223936359a9a2d542fdd64099d8314fc0518d2af513d8712ede8e2d",
+    "D:\\7506\\mini_project_2\\project\\code\\v8_stack_model.py": "dcfc1ec1da0f884e0e23497392e3b2c9f4f9966e6fd682fa0363e5ed5e8e48bd",
+    "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\ensemble.json": "6a17926f2916354f9b63ccfbfb679128eb302d0ab252e036aea66b7b346ff793",
+    "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\equations\\weights.npz": "e6d30c2b059743c18f013d580fbfd9c19a6cd8492d544c0e8d5313b652c0142f",
+    "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\neural\\config.json": "7f91ce85a8a0e659fbe1177b6f825d843aff9e76a729d22347eac4842c2dac02",
+    "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\neural\\weights.npz": "5020d64f7b51523aad23d7ce0811ad6dc98b53ccaa4df0f6971fe9aab7a1aaaa",
+    "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\tree\\tree_config.json": "ce9142d7f863795d44cc779c1e676df8bc2a9f3e82e8f9d37711eb4b03d98547",
+    "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\tree\\tree_weights.npz": "78abf4241a0a7a0f8099d8ebd60695d8e4f0e5664c059a8431583f9313202eaa"
+  },
+  "protected_v2": {
+    "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\ensemble.json": "6a17926f2916354f9b63ccfbfb679128eb302d0ab252e036aea66b7b346ff793",
+    "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\equations\\weights.npz": "e6d30c2b059743c18f013d580fbfd9c19a6cd8492d544c0e8d5313b652c0142f",
+    "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\neural\\config.json": "7f91ce85a8a0e659fbe1177b6f825d843aff9e76a729d22347eac4842c2dac02",
+    "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\neural\\weights.npz": "5020d64f7b51523aad23d7ce0811ad6dc98b53ccaa4df0f6971fe9aab7a1aaaa",
+    "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\tree\\tree_config.json": "ce9142d7f863795d44cc779c1e676df8bc2a9f3e82e8f9d37711eb4b03d98547",
+    "D:\\7506\\mini_project_2\\project\\release_v2\\model_bundle\\tree\\tree_weights.npz": "78abf4241a0a7a0f8099d8ebd60695d8e4f0e5664c059a8431583f9313202eaa",
+    "D:\\7506\\mini_project_2\\project\\code\\submission_v2.py": "1df5d8fe8fd1a9cb30221e464a2d3f3cf24ab886451e090343fcf49d0a6f4354",
+    "D:\\7506\\mini_project_2\\project\\code\\ensemble_model.py": "7da54bc4f225c895775f415891261ad5f1bc1febecaab43faefaeaf7fe470516",
+    "D:\\7506\\mini_project_2\\project\\code\\equation_features.py": "cd94b9b390023015a1383cc43c869d3005dc559f9503e4331f10763c2e3e7317",
+    "D:\\7506\\mini_project_2\\project\\code\\neural_model.py": "41aab91f060f235151955b448383bc545533b12e481bf678489dd04c07360485",
+    "D:\\7506\\mini_project_2\\project\\code\\tree_model.py": "857b253572e31e4e02f3541f5d2a10585d70f6e584f68b79a3ed7cc214b35d63",
+    "D:\\7506\\mini_project_2\\project\\code\\tree_features.py": "782ddab9a77d333537316077a14db51116e9bfa1b98d65c73cc8c6005ebfa7d2",
+    "D:\\7506\\mini_project_2\\project\\code\\student_features.py": "d7b993b63058c0b9a9d01dbc2ae38904fa462df91176b0a81e519ad6d3e2963b",
+    "D:\\7506\\mini_project_2\\project\\code\\student_model.py": "7aa913b107639bc81466ffb45f34e474b1913947a1d1f85da0316c828182b170",
+    "D:\\7506\\mini_project_2\\MP2_整套交付_v2_20261030.zip": "7fad991602803cb47afeb8d86638e7fa61263a2c4721b785ccaa15536716c191",
+    "D:\\7506\\mini_project_2\\MP2_checkpoint_v2_20261030.zip": "ce64f2cce3a036405c229bf65f8b6947c17530693a40e8687e001c14010aeb8e",
+    "D:\\7506\\mini_project_2\\MP2_最终整套交付_20261030_r2.zip": "9f3f58f1cd39020b93ac97d9cf027269ce75a79120a0f2b8f9b4068eb5c62283",
+    "D:\\7506\\mini_project_2\\MP2_checkpoint_final_20261030_r2.zip": "ce64f2cce3a036405c229bf65f8b6947c17530693a40e8687e001c14010aeb8e"
+  }
+}

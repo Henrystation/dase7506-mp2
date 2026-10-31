@@ -1,0 +1,21 @@
+# Python bytecode and local environments
+__pycache__/
+*.py[cod]
+/.venv/
+/venv/
+/env/
+/inference_env/
+/training_env/
+/code/.venv/
+/code/venv/
+/code/env/
+/code/inference_env/
+/code/training_env/
+
+# New reproduction outputs; preserve the frozen evidence/reproduction/ records.
+/runs/
+/code/runs/
+/reproduction/
+/code/reproduction/
+/nested_cv_*/
+/code/nested_cv_*/

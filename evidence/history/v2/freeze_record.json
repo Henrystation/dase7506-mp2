@@ -1,0 +1,26 @@
+{
+  "frozen_at": "2026-10-30T22:19:08.152424+08:00",
+  "version": "v2",
+  "selection": "training-only OOF cross-validation and official validation; no test error inspection",
+  "cv_correct": 1760,
+  "cv_n": 2114,
+  "validation_hard_correct": 312,
+  "validation_hard_n": 355,
+  "prior_version": "v1 scored once on 14 October; v2 development uses train/validation only",
+  "hashes": {
+    "release_v2/model_bundle/ensemble.json": "6a17926f2916354f9b63ccfbfb679128eb302d0ab252e036aea66b7b346ff793",
+    "release_v2/model_bundle/equations/weights.npz": "e6d30c2b059743c18f013d580fbfd9c19a6cd8492d544c0e8d5313b652c0142f",
+    "release_v2/model_bundle/neural/config.json": "7f91ce85a8a0e659fbe1177b6f825d843aff9e76a729d22347eac4842c2dac02",
+    "release_v2/model_bundle/neural/weights.npz": "5020d64f7b51523aad23d7ce0811ad6dc98b53ccaa4df0f6971fe9aab7a1aaaa",
+    "release_v2/model_bundle/tree/tree_config.json": "ce9142d7f863795d44cc779c1e676df8bc2a9f3e82e8f9d37711eb4b03d98547",
+    "release_v2/model_bundle/tree/tree_weights.npz": "78abf4241a0a7a0f8099d8ebd60695d8e4f0e5664c059a8431583f9313202eaa",
+    "code/submission_v2.py": "1df5d8fe8fd1a9cb30221e464a2d3f3cf24ab886451e090343fcf49d0a6f4354",
+    "code/ensemble_model.py": "7da54bc4f225c895775f415891261ad5f1bc1febecaab43faefaeaf7fe470516",
+    "code/equation_features.py": "cd94b9b390023015a1383cc43c869d3005dc559f9503e4331f10763c2e3e7317",
+    "code/neural_model.py": "41aab91f060f235151955b448383bc545533b12e481bf678489dd04c07360485",
+    "code/tree_model.py": "857b253572e31e4e02f3541f5d2a10585d70f6e584f68b79a3ed7cc214b35d63",
+    "code/tree_features.py": "782ddab9a77d333537316077a14db51116e9bfa1b98d65c73cc8c6005ebfa7d2",
+    "code/student_features.py": "d7b993b63058c0b9a9d01dbc2ae38904fa462df91176b0a81e519ad6d3e2963b",
+    "code/student_model.py": "7aa913b107639bc81466ffb45f34e474b1913947a1d1f85da0316c828182b170"
+  }
+}

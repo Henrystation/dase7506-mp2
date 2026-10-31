@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "scope": "Packaged default submission, relative checkpoint and original official runner; prior fabricated import-path probe reused",
+  "synthetic_smoke_sha256": "b83d23e48b82390d9e868a5d943bb1cb71170e5bc1c251a33152457d59acab07",
+  "default_submission_sha256": "a4a0afb5476fd9ddfd8b1668f5bd52c8e98b25074ce8a8a8d2dc34ea76390774",
+  "all_custom_module_imports_inside_package": true,
+  "pythonpath_cleared": true,
+  "numpy_only_inference": true,
+  "relative_checkpoint": "../checkpoint",
+  "fixed_checkpoint_unchanged": true,
+  "exact_historical_ids_and_choices": true,
+  "compared_fields": [
+    "ids",
+    "selected"
+  ],
+  "per_question_gold_error_analysis": false,
+  "model_selection_or_tuning": false
+}

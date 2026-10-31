@@ -1,0 +1,23 @@
+{
+  "version": "mp2_answer_group_ensemble_v2",
+  "members": {
+    "equations": {
+      "weight": 0.5,
+      "pooling": "max",
+      "oof_scale": 0.24336877465248108
+    },
+    "neural": {
+      "weight": 0.25,
+      "pooling": "max",
+      "oof_scale": 0.9408119916915894
+    },
+    "tree": {
+      "weight": 0.25,
+      "pooling": "mean",
+      "oof_scale": 1.1752545833587646
+    }
+  },
+  "vote_strength": 0.0,
+  "cv_seed": 20261030,
+  "threads": 4
+}

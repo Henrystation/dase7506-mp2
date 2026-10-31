@@ -1,0 +1,12 @@
+{
+  "stack_config.json": "653a4d6db68159b5def41f036d4912bad7be15f11cd98a72d41c76c1bbbc6801",
+  "pair4\\cat_config.json": "3ef0963a9c449c163fcd231c2de5257467f0cf35a46ec52f66581c744ce1a82e",
+  "pair4\\cat_weights.npz": "d249a6f88f63ee68142859ee0305451f3af52e0ff6a201482a78b88bcce6d673",
+  "pair4\\projection.npz": "f425708cd7c961791a11ba9da29fc7f97b62bc8f72094686329473a25c4f57f0",
+  "v2\\ensemble.json": "6a17926f2916354f9b63ccfbfb679128eb302d0ab252e036aea66b7b346ff793",
+  "v2\\equations\\weights.npz": "e6d30c2b059743c18f013d580fbfd9c19a6cd8492d544c0e8d5313b652c0142f",
+  "v2\\neural\\config.json": "7f91ce85a8a0e659fbe1177b6f825d843aff9e76a729d22347eac4842c2dac02",
+  "v2\\neural\\weights.npz": "5020d64f7b51523aad23d7ce0811ad6dc98b53ccaa4df0f6971fe9aab7a1aaaa",
+  "v2\\tree\\tree_config.json": "ce9142d7f863795d44cc779c1e676df8bc2a9f3e82e8f9d37711eb4b03d98547",
+  "v2\\tree\\tree_weights.npz": "78abf4241a0a7a0f8099d8ebd60695d8e4f0e5664c059a8431583f9313202eaa"
+}

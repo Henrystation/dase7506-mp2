@@ -1,0 +1,50 @@
+{
+  "version": "v3",
+  "score": {
+    "protocol": "dase7506-mp2-open-hard-verifier-v5",
+    "split": "test",
+    "correct": 390,
+    "n": 467,
+    "accuracy": 83.5117773019272,
+    "scoring_seconds": 0.1521558999957051
+  },
+  "prediction": {
+    "command": [
+      "D:\\7506\\.conda\\mp1\\python.exe",
+      "D:\\7506\\mini_project_2\\project\\code\\predict.py",
+      "--method",
+      "D:\\7506\\mini_project_2\\project\\code\\runs\\retrospective_test_20261031\\v3\\submission.py",
+      "--checkpoint",
+      "D:\\7506\\mini_project_2\\project\\code\\runs\\retrospective_test_20261031\\v3",
+      "--split",
+      "test",
+      "--output",
+      "D:\\7506\\mini_project_2\\project\\code\\runs\\retrospective_test_20261031\\v3\\test-predictions.json"
+    ],
+    "wall_seconds": 2.2499000999960117,
+    "stdout": "{\"protocol\": \"dase7506-mp2-open-hard-verifier-v5\", \"split\": \"test\", \"prediction_seconds\": 2.0133249000064097}",
+    "stderr": ""
+  },
+  "scoring": {
+    "command": [
+      "D:\\7506\\.conda\\mp1\\python.exe",
+      "D:\\7506\\mini_project_2\\project\\code\\score_predictions.py",
+      "--split",
+      "test",
+      "--predictions",
+      "D:\\7506\\mini_project_2\\project\\code\\runs\\retrospective_test_20261031\\v3\\test-predictions.json",
+      "--output",
+      "D:\\7506\\mini_project_2\\project\\code\\runs\\retrospective_test_20261031\\v3\\test-score.json"
+    ],
+    "wall_seconds": 0.384397199988598,
+    "stdout": "{\n  \"protocol\": \"dase7506-mp2-open-hard-verifier-v5\",\n  \"split\": \"test\",\n  \"correct\": 390,\n  \"n\": 467,\n  \"accuracy\": 83.5117773019272,\n  \"scoring_seconds\": 0.1521558999957051\n}",
+    "stderr": ""
+  },
+  "combined_wall_seconds": 2.6342972999846097,
+  "asset_uncompressed_bytes": 1691475,
+  "threads_per_process": 4,
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.14 | packaged by Anaconda, Inc. | (main, Aug 27 2026, 14:37:13) [MSC v.1942 64 bit (AMD64)]",
+  "reference_machine_benchmark": false,
+  "freeze_sha256": "18a97f07802ede26e80a1a8043c78606de6b12c5341e69847952273eb42867fb"
+}

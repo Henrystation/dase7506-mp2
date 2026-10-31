@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "checked_at": "2026-10-31T18:55:38.217850+08:00",
+  "report": "report/MP2_Report_Wang_Junxin_V8_Final.docx",
+  "sha256": "882307a0eb75c574b3a8be6aa26193614dd71e5290346cc7ce4d7b9ee050af9e",
+  "pages": 8,
+  "page_limit": 10,
+  "editable_docx": true,
+  "rendering": {
+    "renderer": "Microsoft Word COM, invisible read-only open, PDF export; bundled Poppler PNG at 120 DPI",
+    "fallback_reason": "Bundled render_docx.py was attempted; bundled soffice.exe is unavailable on this Windows runtime.",
+    "visual_review": "All eight pages reviewed. Final pages 1-6 are pixel-identical to reviewed render3; final pages 7-8 were reviewed after the last text edit.",
+    "page_png_sha256": {
+      "1": "1f2efa406975e2c32a3a929f80f2dbf7dd0924909a44ae6be90e131f324ec62e",
+      "2": "5aabac2478b349810167d90559c6b10814be632589ba44af5b05bf298d60331b",
+      "3": "bb3ed5ffe030936259e5fbb6715d9371991a469d831df06b23fdaf5d5aa40d76",
+      "4": "8edf98f8934333eaf23e74a28ce9e3cb893c4d57d129cf5d7f6a75c3e781d1b0",
+      "5": "fef486c6e70788e4243fa07a2c8324938cf6d67a7f8aff59d71df2d50d7e7b02",
+      "6": "71cb12b773fe188dbe98543f33076f017b8a3d972de9b19561acd113fc542a61",
+      "7": "a342c789453e038cc03592e2fec36af775783d5e113691719604297590663c44",
+      "8": "35bf1ebec685b1a17af6a702d405522681015187ecf65bf56efc3aad62b7a305"
+    },
+    "no_clipped_text_or_tables": true,
+    "no_blank_pages": true,
+    "no_internal_qa_pdf_or_png_in_submission": true
+  },
+  "tracked_changes": 0,
+  "comments": 0,
+  "confidence_table_includes_overall_validation": true,
+  "ai_disclosure": "Two sentences covering method discussion, screening, code, experiments, result checking, report preparation and final author responsibility.",
+  "references": "Course materials, research papers and official library documentation."
+}

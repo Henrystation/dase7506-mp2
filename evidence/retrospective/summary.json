@@ -1,0 +1,98 @@
+{
+  "status": "completed",
+  "completed_at": "2026-10-31T18:17:08.073099+08:00",
+  "rows": [
+    {
+      "version": "V3",
+      "correct": 390,
+      "n": 467,
+      "accuracy": 83.5117773019272,
+      "seconds": 2.6342972999846097,
+      "asset_bytes": 1691475,
+      "local_under_30_seconds": true,
+      "score_path": "D:\\7506\\mini_project_2\\project\\code\\runs\\retrospective_test_20261031\\v3\\test-score.json"
+    },
+    {
+      "version": "V4",
+      "correct": 389,
+      "n": 467,
+      "accuracy": 83.29764453961457,
+      "seconds": 2.4713003999495413,
+      "asset_bytes": 1664474,
+      "local_under_30_seconds": true,
+      "score_path": "D:\\7506\\mini_project_2\\project\\code\\runs\\retrospective_test_20261031\\v4\\test-score.json"
+    },
+    {
+      "version": "V5",
+      "correct": 390,
+      "n": 467,
+      "accuracy": 83.5117773019272,
+      "seconds": 2.195860800013179,
+      "asset_bytes": 2804463,
+      "local_under_30_seconds": true,
+      "score_path": "D:\\7506\\mini_project_2\\project\\code\\runs\\retrospective_test_20261031\\v5\\test-score.json"
+    },
+    {
+      "version": "V6",
+      "correct": 389,
+      "n": 467,
+      "accuracy": 83.29764453961457,
+      "seconds": 2.562395099987043,
+      "asset_bytes": 1664326,
+      "local_under_30_seconds": true,
+      "score_path": "D:\\7506\\mini_project_2\\project\\code\\runs\\retrospective_test_20261031\\v6\\test-score.json"
+    },
+    {
+      "version": "V7",
+      "correct": 389,
+      "n": 467,
+      "accuracy": 83.29764453961457,
+      "seconds": 2.2743765999621246,
+      "asset_bytes": 4272652,
+      "local_under_30_seconds": true,
+      "score_path": "D:\\7506\\mini_project_2\\project\\code\\runs\\retrospective_test_20261031\\v7\\test-score.json"
+    },
+    {
+      "version": "V8",
+      "correct": 395,
+      "n": 467,
+      "accuracy": 84.58244111349036,
+      "seconds": 3.2238505999848712,
+      "asset_bytes": 1910314,
+      "local_under_30_seconds": true,
+      "score_path": "D:\\7506\\mini_project_2\\project\\code\\runs\\retrospective_test_20261031\\v8\\test-score.json"
+    }
+  ],
+  "historical_v2": {
+    "correct": 390,
+    "n": 467,
+    "accuracy": 83.5117773019272,
+    "rerun": false
+  },
+  "freeze_sha256": "18a97f07802ede26e80a1a8043c78606de6b12c5341e69847952273eb42867fb",
+  "original_v2_and_four_archives_preserved": true,
+  "test_references_used": "Official independent scorer only; no per-question test error inspection.",
+  "new_model_selection_or_tuning": false,
+  "submitted_or_published": false,
+  "warning": "Retrospective comparison after development. These scores are not authorization to select a model using test results; V2 remains the formal version.",
+  "artifact_sha256": {
+    "v3\\test-benchmark.json": "d71b2c59847e49e54046f5ded35ccad663f355dc96c93e3f13b3c1d706277ae6",
+    "v3\\test-predictions.json": "6529b1d75bb48359166959e013bca7987ac8e54699cbda9eb58e02de647ba665",
+    "v3\\test-score.json": "fda680dbc90246b6ed5ee8f070e69f026663eee707480ede93844012c45dbf6a",
+    "v4\\test-benchmark.json": "317266e764afa97683b14ff148b4b083fce7c2d07a5a9da164cfd0e769d5c441",
+    "v4\\test-predictions.json": "8b5ab73b0d029cb32550f17ce1df0434b30ee5f5faf64d306a566cb90014f388",
+    "v4\\test-score.json": "270e216a59e7f3d87910d242e983c6b24b653efc7abbe1b543895624e8bae1ca",
+    "v5\\test-benchmark.json": "fcd16544cadb7882e76fdb3eae373664a80afd433a573f1f97113391c92588d7",
+    "v5\\test-predictions.json": "0316dbf89cf9bb632ef6ba1e782923a01d216004d358fb605e7a7ca0055de58b",
+    "v5\\test-score.json": "27e8ebb0a2ba57b1efd141cc43a4ed5586eaab7623518132f5e76441fb9ae96e",
+    "v6\\test-benchmark.json": "64a8df4c73ee1069cfd43d1467625fb1ebc6c534ff43e13dc8a806426589b9fe",
+    "v6\\test-predictions.json": "32b8abe3f3b3377db38a9937113f24992263c4e0652270641a86f4c1d8fba134",
+    "v6\\test-score.json": "ba1067ebfed2eb08d63d42633dfe37498abac4479f242f974e9b03a3284460ff",
+    "v7\\test-benchmark.json": "ae2ee662aafbe546eaf47ad78c61d552e71720cf2fa99634215101e0e4f196c0",
+    "v7\\test-predictions.json": "c93e0e3f7d3d2d4ad6c54f36739d42ad0f0db3877b0a2a093bdb143f025969e5",
+    "v7\\test-score.json": "ca701b103587066eb8ec0bea52d263b520e39af419e83996d47c7e87bb0e063e",
+    "v8\\test-benchmark.json": "90d2b34753c50ec781bbc96ddd18798e8a44dcc389a71c2a04a4ae0ea03fb1b5",
+    "v8\\test-predictions.json": "ff368439a3351e33f15f1bfce1d4f19a8ec65ef7a808ce582e84f3db7017b10e",
+    "v8\\test-score.json": "5c1c0eda4e4a3421d2618ead37af8b0df994bf6b20a2c34090308c2ee95cdcd5"
+  }
+}

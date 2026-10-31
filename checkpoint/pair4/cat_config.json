@@ -1,0 +1,14 @@
+{
+  "version": "mp2_catboost_numeric_symmetric_v8",
+  "n_features": 392,
+  "num_trees": 600,
+  "num_splits": 2399,
+  "num_leaves": 9592,
+  "max_depth": 4,
+  "array_bytes": 117555,
+  "weights_file_bytes": 119567,
+  "output": "RawFormulaVal",
+  "input_cast": "float32",
+  "numeric_dtype": "float64",
+  "source": "https://catboost.ai/docs/en/features/export-model-to-json"
+}

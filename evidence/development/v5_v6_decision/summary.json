@@ -1,0 +1,524 @@
+{
+  "status": "retain_frozen_v2",
+  "selected_for_followup": {},
+  "best_oof_per_family": {
+    "attention": {
+      "config": "small",
+      "seeds": [
+        20261102
+      ],
+      "weight": 0.25,
+      "oof_correct": 1750,
+      "oof_reference": 1741,
+      "net_gain": 9,
+      "fold_delta": [
+        -4,
+        2,
+        6,
+        0,
+        5
+      ],
+      "validation_hard": 309,
+      "validation_all": 752,
+      "attention_scale": 0.2333679348230362,
+      "reference_scale": 0.9536036849021912,
+      "passes": false
+    },
+    "internal_reference": {
+      "config": "reference",
+      "seeds": [
+        7596,
+        7597,
+        7598
+      ],
+      "weight": 0.25,
+      "oof_correct": 1745,
+      "oof_reference": 1741,
+      "net_gain": 4,
+      "fold_delta": [
+        -2,
+        1,
+        9,
+        -6,
+        2
+      ],
+      "validation_hard": 311,
+      "validation_all": 754,
+      "attention_scale": 0.2645244896411896,
+      "reference_scale": 0.9536036849021912,
+      "passes": false
+    },
+    "trajectory": {
+      "alpha": 0.3,
+      "replacement_fraction": 0.5,
+      "oof_correct": 1757,
+      "oof_reference": 1741,
+      "net_gain": 16,
+      "fold_delta": [
+        8,
+        3,
+        7,
+        -1,
+        -1
+      ],
+      "validation_hard": 305,
+      "validation_all": 748,
+      "passes": false
+    }
+  },
+  "all_records": {
+    "attention": [
+      {
+        "config": "small",
+        "seeds": [
+          20261102
+        ],
+        "weight": 0.25,
+        "oof_correct": 1750,
+        "oof_reference": 1741,
+        "net_gain": 9,
+        "fold_delta": [
+          -4,
+          2,
+          6,
+          0,
+          5
+        ],
+        "validation_hard": 309,
+        "validation_all": 752,
+        "attention_scale": 0.2333679348230362,
+        "reference_scale": 0.9536036849021912,
+        "passes": false
+      },
+      {
+        "config": "small",
+        "seeds": [
+          20261102
+        ],
+        "weight": 0.5,
+        "oof_correct": 1738,
+        "oof_reference": 1741,
+        "net_gain": -3,
+        "fold_delta": [
+          -7,
+          5,
+          4,
+          -1,
+          -4
+        ],
+        "validation_hard": 301,
+        "validation_all": 744,
+        "attention_scale": 0.2333679348230362,
+        "reference_scale": 0.9536036849021912,
+        "passes": false
+      },
+      {
+        "config": "small",
+        "seeds": [
+          20261102
+        ],
+        "weight": 1.0,
+        "oof_correct": 1660,
+        "oof_reference": 1741,
+        "net_gain": -81,
+        "fold_delta": [
+          -14,
+          -9,
+          -17,
+          -21,
+          -20
+        ],
+        "validation_hard": 287,
+        "validation_all": 730,
+        "attention_scale": 0.2333679348230362,
+        "reference_scale": 0.9536036849021912,
+        "passes": false
+      },
+      {
+        "config": "small_aug",
+        "seeds": [
+          20261102
+        ],
+        "weight": 0.25,
+        "oof_correct": 1739,
+        "oof_reference": 1741,
+        "net_gain": -2,
+        "fold_delta": [
+          -4,
+          5,
+          1,
+          -4,
+          0
+        ],
+        "validation_hard": 311,
+        "validation_all": 754,
+        "attention_scale": 0.24210914969444275,
+        "reference_scale": 0.9536036849021912,
+        "passes": false
+      },
+      {
+        "config": "small_aug",
+        "seeds": [
+          20261102
+        ],
+        "weight": 0.5,
+        "oof_correct": 1711,
+        "oof_reference": 1741,
+        "net_gain": -30,
+        "fold_delta": [
+          -12,
+          -9,
+          -2,
+          -6,
+          -1
+        ],
+        "validation_hard": 309,
+        "validation_all": 752,
+        "attention_scale": 0.24210914969444275,
+        "reference_scale": 0.9536036849021912,
+        "passes": false
+      },
+      {
+        "config": "small_aug",
+        "seeds": [
+          20261102
+        ],
+        "weight": 1.0,
+        "oof_correct": 1617,
+        "oof_reference": 1741,
+        "net_gain": -124,
+        "fold_delta": [
+          -27,
+          -23,
+          -18,
+          -29,
+          -27
+        ],
+        "validation_hard": 287,
+        "validation_all": 730,
+        "attention_scale": 0.24210914969444275,
+        "reference_scale": 0.9536036849021912,
+        "passes": false
+      },
+      {
+        "config": "wide_aug",
+        "seeds": [
+          20261102
+        ],
+        "weight": 0.25,
+        "oof_correct": 1744,
+        "oof_reference": 1741,
+        "net_gain": 3,
+        "fold_delta": [
+          -4,
+          2,
+          5,
+          0,
+          0
+        ],
+        "validation_hard": 308,
+        "validation_all": 751,
+        "attention_scale": 0.24443823099136353,
+        "reference_scale": 0.9536036849021912,
+        "passes": false
+      },
+      {
+        "config": "wide_aug",
+        "seeds": [
+          20261102
+        ],
+        "weight": 0.5,
+        "oof_correct": 1720,
+        "oof_reference": 1741,
+        "net_gain": -21,
+        "fold_delta": [
+          -7,
+          -9,
+          4,
+          -4,
+          -5
+        ],
+        "validation_hard": 305,
+        "validation_all": 748,
+        "attention_scale": 0.24443823099136353,
+        "reference_scale": 0.9536036849021912,
+        "passes": false
+      },
+      {
+        "config": "wide_aug",
+        "seeds": [
+          20261102
+        ],
+        "weight": 1.0,
+        "oof_correct": 1626,
+        "oof_reference": 1741,
+        "net_gain": -115,
+        "fold_delta": [
+          -28,
+          -22,
+          -14,
+          -23,
+          -28
+        ],
+        "validation_hard": 290,
+        "validation_all": 733,
+        "attention_scale": 0.24443823099136353,
+        "reference_scale": 0.9536036849021912,
+        "passes": false
+      }
+    ],
+    "internal_reference": [
+      {
+        "config": "reference",
+        "seeds": [
+          7596,
+          7597,
+          7598
+        ],
+        "weight": 0.25,
+        "oof_correct": 1745,
+        "oof_reference": 1741,
+        "net_gain": 4,
+        "fold_delta": [
+          -2,
+          1,
+          9,
+          -6,
+          2
+        ],
+        "validation_hard": 311,
+        "validation_all": 754,
+        "attention_scale": 0.2645244896411896,
+        "reference_scale": 0.9536036849021912,
+        "passes": false
+      },
+      {
+        "config": "reference",
+        "seeds": [
+          7596,
+          7597,
+          7598
+        ],
+        "weight": 0.5,
+        "oof_correct": 1736,
+        "oof_reference": 1741,
+        "net_gain": -5,
+        "fold_delta": [
+          -4,
+          0,
+          13,
+          -13,
+          -1
+        ],
+        "validation_hard": 312,
+        "validation_all": 755,
+        "attention_scale": 0.2645244896411896,
+        "reference_scale": 0.9536036849021912,
+        "passes": false
+      },
+      {
+        "config": "reference",
+        "seeds": [
+          7596,
+          7597,
+          7598
+        ],
+        "weight": 1.0,
+        "oof_correct": 1692,
+        "oof_reference": 1741,
+        "net_gain": -49,
+        "fold_delta": [
+          -18,
+          0,
+          6,
+          -30,
+          -7
+        ],
+        "validation_hard": 296,
+        "validation_all": 739,
+        "attention_scale": 0.2645244896411896,
+        "reference_scale": 0.9536036849021912,
+        "passes": false
+      }
+    ],
+    "trajectory": [
+      {
+        "alpha": 0.3,
+        "replacement_fraction": 0.5,
+        "oof_correct": 1757,
+        "oof_reference": 1741,
+        "net_gain": 16,
+        "fold_delta": [
+          8,
+          3,
+          7,
+          -1,
+          -1
+        ],
+        "validation_hard": 305,
+        "validation_all": 748,
+        "passes": false
+      },
+      {
+        "alpha": 0.3,
+        "replacement_fraction": 1.0,
+        "oof_correct": 1745,
+        "oof_reference": 1741,
+        "net_gain": 4,
+        "fold_delta": [
+          6,
+          2,
+          -3,
+          -1,
+          0
+        ],
+        "validation_hard": 298,
+        "validation_all": 741,
+        "passes": false
+      },
+      {
+        "alpha": 1.0,
+        "replacement_fraction": 0.5,
+        "oof_correct": 1754,
+        "oof_reference": 1741,
+        "net_gain": 13,
+        "fold_delta": [
+          7,
+          3,
+          5,
+          -2,
+          0
+        ],
+        "validation_hard": 308,
+        "validation_all": 751,
+        "passes": false
+      },
+      {
+        "alpha": 1.0,
+        "replacement_fraction": 1.0,
+        "oof_correct": 1748,
+        "oof_reference": 1741,
+        "net_gain": 7,
+        "fold_delta": [
+          9,
+          4,
+          0,
+          -2,
+          -4
+        ],
+        "validation_hard": 300,
+        "validation_all": 743,
+        "passes": false
+      },
+      {
+        "alpha": 3.0,
+        "replacement_fraction": 0.5,
+        "oof_correct": 1749,
+        "oof_reference": 1741,
+        "net_gain": 8,
+        "fold_delta": [
+          4,
+          4,
+          6,
+          -4,
+          -2
+        ],
+        "validation_hard": 311,
+        "validation_all": 754,
+        "passes": false
+      },
+      {
+        "alpha": 3.0,
+        "replacement_fraction": 1.0,
+        "oof_correct": 1743,
+        "oof_reference": 1741,
+        "net_gain": 2,
+        "fold_delta": [
+          5,
+          1,
+          3,
+          -2,
+          -5
+        ],
+        "validation_hard": 309,
+        "validation_all": 752,
+        "passes": false
+      }
+    ]
+  },
+  "reference": {
+    "outer_fold_seed": 20261031,
+    "oof_correct": 1741,
+    "oof_n": 2114,
+    "validation_hard_correct": 312,
+    "validation_hard_n": 355,
+    "validation_all_correct": 755,
+    "validation_all_n": 798
+  },
+  "existing_frozen_test_result": {
+    "correct": 390,
+    "n": 467,
+    "accuracy": 83.5117773019272,
+    "new_test_run": false
+  },
+  "data_use": "Official train and validation only for new experiments; no test/audit predictions or scoring",
+  "second_outer_seed_run": false,
+  "official_submission_changed": false,
+  "frozen_files": 14,
+  "preserved_archives": {
+    "MP2_整套交付_v2_20261030.zip": "7fad991602803cb47afeb8d86638e7fa61263a2c4721b785ccaa15536716c191",
+    "MP2_checkpoint_v2_20261030.zip": "ce64f2cce3a036405c229bf65f8b6947c17530693a40e8687e001c14010aeb8e",
+    "MP2_最终整套交付_20261030_r2.zip": "9f3f58f1cd39020b93ac97d9cf027269ce75a79120a0f2b8f9b4068eb5c62283",
+    "MP2_checkpoint_final_20261030_r2.zip": "ce64f2cce3a036405c229bf65f8b6947c17530693a40e8687e001c14010aeb8e"
+  },
+  "source_hashes": {
+    "attention_model_v5.py": "774ac4435179e5941712a85fae3f406561d8c4b9f3812273fb748e883e3f9cf0",
+    "trajectory_features_v6.py": "5e337fe1dd6302f7d094ed24c26904f0f7d4db0782e1776a52f34b4500472c13",
+    "experiments/v5_attention.py": "1394a9bf4b92114120e9567f5fe3512b65c9d3ee1ae36c0ae6b6815c99e603e2",
+    "experiments/v5c_reference_attention.py": "6bc60a3091946bf56afdac56edd967b20125545df25e81371825453c344845ec",
+    "experiments/evaluate_v5.py": "d15ffd81c3a7d65c78ba47ee0880fbaeff3a97225d38ae3f260709c34b0dc68c",
+    "experiments/v6_trajectory.py": "bc231150b085251ea9b5931045f848d8fb8824ce0fde2eba58afb972d55570cd"
+  },
+  "result_hashes": {
+    "attention": "7a62f2f0c1bd98d9ea509433f17ab2caf6789dd9d100319726e31f1fc5f47ed7",
+    "internal_reference": "f9f6fc2866c97660d21a01cfcdca268b87872c46fe261f296937293b139469e3",
+    "trajectory": "e2383e609a753b17dd35d2e93817842d5b15d0637c6177ee095bfe34c9a81afd"
+  },
+  "inference_contract": {
+    "status": "passed",
+    "checks": [
+      {
+        "n": 1,
+        "id_invariance": true,
+        "row_permutation": true,
+        "candidate_permutation": true,
+        "valid_outputs": true
+      },
+      {
+        "n": 3,
+        "id_invariance": true,
+        "row_permutation": true,
+        "candidate_permutation": true,
+        "valid_outputs": true
+      },
+      {
+        "n": 7,
+        "id_invariance": true,
+        "row_permutation": true,
+        "candidate_permutation": true,
+        "valid_outputs": true
+      },
+      {
+        "n": 13,
+        "id_invariance": true,
+        "row_permutation": true,
+        "candidate_permutation": true,
+        "valid_outputs": true
+      }
+    ],
+    "reference_or_bank_loading_blocked": true,
+    "numpy_only": true
+  },
+  "delivery_policy": "Internal copied-code reference branch and its weights are excluded from submission. Formal report describes only methods actually adopted and preserves accurate provenance.",
+  "limitations": "Development labels were previously used; these folds are stability checks, not an untouched holdout. No future leaderboard percentile is inferred."
+}

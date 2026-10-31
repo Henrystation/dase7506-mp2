@@ -1,0 +1,50 @@
+{
+  "split": "test",
+  "score": {
+    "protocol": "dase7506-mp2-open-hard-verifier-v5",
+    "split": "test",
+    "correct": 390,
+    "n": 467,
+    "accuracy": 83.5117773019272,
+    "scoring_seconds": 0.1392766000062693
+  },
+  "combined_wall_seconds": 2.6974040000059176,
+  "stages": [
+    {
+      "command": [
+        "D:\\7506\\.conda\\mp1\\python.exe",
+        "predict.py",
+        "--method",
+        "submission_v2.py",
+        "--checkpoint",
+        "..\\release_v2\\model_bundle",
+        "--split",
+        "test",
+        "--output",
+        "runs\\v2_final_test\\test-predictions.json"
+      ],
+      "wall_seconds": 2.2029793999972753,
+      "stdout": "{\"protocol\": \"dase7506-mp2-open-hard-verifier-v5\", \"split\": \"test\", \"prediction_seconds\": 1.8627998000010848}"
+    },
+    {
+      "command": [
+        "D:\\7506\\.conda\\mp1\\python.exe",
+        "score_predictions.py",
+        "--split",
+        "test",
+        "--predictions",
+        "runs\\v2_final_test\\test-predictions.json",
+        "--output",
+        "runs\\v2_final_test\\test-score.json"
+      ],
+      "wall_seconds": 0.48589320000610314,
+      "stdout": "{\n  \"protocol\": \"dase7506-mp2-open-hard-verifier-v5\",\n  \"split\": \"test\",\n  \"correct\": 390,\n  \"n\": 467,\n  \"accuracy\": 83.5117773019272,\n  \"scoring_seconds\": 0.1392766000062693\n}"
+    }
+  ],
+  "threads_each_sequential_process": 4,
+  "checkpoint_uncompressed_bytes": 1655250,
+  "checkpoint_limit_bytes": 16777216,
+  "platform": "Windows-11-10.0.26200-SP0",
+  "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+  "python": "3.12.14 | packaged by Anaconda, Inc. | (main, Aug 27 2026, 14:37:13) [MSC v.1942 64 bit (AMD64)]"
+}

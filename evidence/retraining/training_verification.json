@@ -1,0 +1,348 @@
+{
+  "status": "passed",
+  "numeric_assets_exact": true,
+  "numeric_assets_equal": true,
+  "base_oof_exact": true,
+  "base_oof_equal": true,
+  "asset_comparisons": {
+    "pair4/cat_weights.npz": {
+      "feature": {
+        "shape": [
+          2399
+        ],
+        "dtype": "int32",
+        "exact": true,
+        "numerically_equal": true,
+        "max_absolute_error": 0.0
+      },
+      "border": {
+        "shape": [
+          2399
+        ],
+        "dtype": "float64",
+        "exact": true,
+        "numerically_equal": true,
+        "max_absolute_error": 0.0
+      },
+      "nan_right": {
+        "shape": [
+          2399
+        ],
+        "dtype": "bool",
+        "exact": true,
+        "numerically_equal": true,
+        "max_absolute_error": 0.0
+      },
+      "leaf_values": {
+        "shape": [
+          9592
+        ],
+        "dtype": "float64",
+        "exact": true,
+        "numerically_equal": true,
+        "max_absolute_error": 0.0
+      },
+      "split_offsets": {
+        "shape": [
+          601
+        ],
+        "dtype": "int64",
+        "exact": true,
+        "numerically_equal": true,
+        "max_absolute_error": 0.0
+      },
+      "leaf_offsets": {
+        "shape": [
+          601
+        ],
+        "dtype": "int64",
+        "exact": true,
+        "numerically_equal": true,
+        "max_absolute_error": 0.0
+      },
+      "scale": {
+        "shape": [],
+        "dtype": "float64",
+        "exact": true,
+        "numerically_equal": true,
+        "max_absolute_error": 0.0
+      },
+      "bias": {
+        "shape": [],
+        "dtype": "float64",
+        "exact": true,
+        "numerically_equal": true,
+        "max_absolute_error": 0.0
+      }
+    },
+    "pair4/projection.npz": {
+      "mean": {
+        "shape": [
+          1024
+        ],
+        "dtype": "float32",
+        "exact": true,
+        "numerically_equal": true,
+        "max_absolute_error": 0.0
+      },
+      "components": {
+        "shape": [
+          32,
+          1024
+        ],
+        "dtype": "float32",
+        "exact": true,
+        "numerically_equal": true,
+        "max_absolute_error": 0.0
+      }
+    },
+    "v2/equations/weights.npz": {
+      "weights": {
+        "shape": [
+          1066
+        ],
+        "dtype": "float32",
+        "exact": true,
+        "numerically_equal": true,
+        "max_absolute_error": 0.0
+      },
+      "scale": {
+        "shape": [
+          1066
+        ],
+        "dtype": "float32",
+        "exact": true,
+        "numerically_equal": true,
+        "max_absolute_error": 0.0
+      }
+    },
+    "v2/neural/weights.npz": {
+      "fc1.weight": {
+        "shape": [
+          128,
+          2112
+        ],
+        "dtype": "float32",
+        "exact": true,
+        "numerically_equal": true,
+        "max_absolute_error": 0.0
+      },
+      "fc1.bias": {
+        "shape": [
+          128
+        ],
+        "dtype": "float32",
+        "exact": true,
+        "numerically_equal": true,
+        "max_absolute_error": 0.0
+      },
+      "fc2.weight": {
+        "shape": [
+          64,
+          128
+        ],
+        "dtype": "float32",
+        "exact": true,
+        "numerically_equal": true,
+        "max_absolute_error": 0.0
+      },
+      "fc2.bias": {
+        "shape": [
+          64
+        ],
+        "dtype": "float32",
+        "exact": true,
+        "numerically_equal": true,
+        "max_absolute_error": 0.0
+      },
+      "out.weight": {
+        "shape": [
+          1,
+          64
+        ],
+        "dtype": "float32",
+        "exact": true,
+        "numerically_equal": true,
+        "max_absolute_error": 0.0
+      },
+      "out.bias": {
+        "shape": [
+          1
+        ],
+        "dtype": "float32",
+        "exact": true,
+        "numerically_equal": true,
+        "max_absolute_error": 0.0
+      },
+      "raw_mean": {
+        "shape": [
+          1056
+        ],
+        "dtype": "float32",
+        "exact": true,
+        "numerically_equal": true,
+        "max_absolute_error": 0.0
+      },
+      "raw_scale": {
+        "shape": [
+          1056
+        ],
+        "dtype": "float32",
+        "exact": true,
+        "numerically_equal": true,
+        "max_absolute_error": 0.0
+      },
+      "diff_scale": {
+        "shape": [
+          1056
+        ],
+        "dtype": "float32",
+        "exact": true,
+        "numerically_equal": true,
+        "max_absolute_error": 0.0
+      },
+      "ridge_weights": {
+        "shape": [
+          1056
+        ],
+        "dtype": "float32",
+        "exact": true,
+        "numerically_equal": true,
+        "max_absolute_error": 0.0
+      },
+      "ridge_scale": {
+        "shape": [
+          1056
+        ],
+        "dtype": "float32",
+        "exact": true,
+        "numerically_equal": true,
+        "max_absolute_error": 0.0
+      }
+    },
+    "v2/tree/tree_weights.npz": {
+      "feature": {
+        "shape": [
+          17400
+        ],
+        "dtype": "int32",
+        "exact": true,
+        "numerically_equal": true,
+        "max_absolute_error": 0.0
+      },
+      "left": {
+        "shape": [
+          17400
+        ],
+        "dtype": "int32",
+        "exact": true,
+        "numerically_equal": true,
+        "max_absolute_error": 0.0
+      },
+      "right": {
+        "shape": [
+          17400
+        ],
+        "dtype": "int32",
+        "exact": true,
+        "numerically_equal": true,
+        "max_absolute_error": 0.0
+      },
+      "threshold": {
+        "shape": [
+          17400
+        ],
+        "dtype": "float64",
+        "exact": true,
+        "numerically_equal": true,
+        "max_absolute_error": 0.0
+      },
+      "value": {
+        "shape": [
+          17400
+        ],
+        "dtype": "float64",
+        "exact": true,
+        "numerically_equal": true,
+        "max_absolute_error": 0.0
+      },
+      "default_left": {
+        "shape": [
+          17400
+        ],
+        "dtype": "bool",
+        "exact": true,
+        "numerically_equal": true,
+        "max_absolute_error": 0.0
+      },
+      "roots": {
+        "shape": [
+          600
+        ],
+        "dtype": "int32",
+        "exact": true,
+        "numerically_equal": true,
+        "max_absolute_error": 0.0
+      }
+    }
+  },
+  "oof_comparisons": {
+    "hard_indices": {
+      "shape": [
+        2114
+      ],
+      "dtype": "int64",
+      "exact": true,
+      "numerically_equal": true,
+      "max_absolute_error": 0.0
+    },
+    "equations": {
+      "shape": [
+        2114,
+        4
+      ],
+      "dtype": "float32",
+      "exact": true,
+      "numerically_equal": true,
+      "max_absolute_error": 0.0
+    },
+    "neural": {
+      "shape": [
+        2114,
+        4
+      ],
+      "dtype": "float32",
+      "exact": true,
+      "numerically_equal": true,
+      "max_absolute_error": 0.0
+    },
+    "tree": {
+      "shape": [
+        2114,
+        4
+      ],
+      "dtype": "float32",
+      "exact": true,
+      "numerically_equal": true,
+      "max_absolute_error": 0.0
+    }
+  },
+  "validation": {
+    "hard_correct": 313,
+    "hard_n": 355,
+    "all_correct": 756,
+    "all_n": 798,
+    "original_hard_correct": 313,
+    "identical_choices": true,
+    "maximum_score_error": 0.0,
+    "numerically_equal_scores": true,
+    "seconds": 15.458916400006274
+  },
+  "training_seconds": 91.33766060002381,
+  "native_numpy_head_max_error": 0.0,
+  "test_accessed": false,
+  "audit_accessed": false,
+  "new_training_or_selection": false,
+  "training_record_sha256": "8c8b3b33f91adfc8a68b7eb8055250bf0fc158432055c2d1be168962adf4bf48",
+  "package_training_entry_sha256": "0a125e28c9367bf364abc491936293f658253407137453a4a7347fc149a98d3d"
+}

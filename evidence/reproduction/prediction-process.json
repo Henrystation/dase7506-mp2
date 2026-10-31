@@ -1,0 +1,22 @@
+{
+  "command": [
+    "D:\\7506\\.conda\\mp1\\python.exe",
+    "-X",
+    "utf8",
+    "-B",
+    "predict.py",
+    "--method",
+    "submission.py",
+    "--checkpoint",
+    "../checkpoint",
+    "--split",
+    "test",
+    "--output",
+    "../evidence/reproduction/test-predictions.json"
+  ],
+  "working_directory": "D:\\7506\\mini_project_2\\project\\final_v8_20261031\\code",
+  "wall_seconds": 3.19180260002031,
+  "returncode": 0,
+  "stdout": "{\"protocol\": \"dase7506-mp2-open-hard-verifier-v5\", \"split\": \"test\", \"prediction_seconds\": 2.927256499999203}",
+  "stderr": ""
+}

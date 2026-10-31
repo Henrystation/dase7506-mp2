@@ -1,0 +1,75 @@
+{
+  "status": "passed",
+  "selected_name": "pair4",
+  "weight": 1,
+  "train_questions": 4755,
+  "hard_questions": 2114,
+  "inner_caches_checked": 15,
+  "outer_head_caches_checked": 5,
+  "exact_fold_partition": true,
+  "exact_oof_cache_assembly": true,
+  "signatures_and_hashes_verified": true,
+  "first_seed": {
+    "outer_seed": 20261031,
+    "oof_n": 2114,
+    "oof_correct": 1756,
+    "oof_reference": 1741,
+    "net_gain": 15,
+    "fold_delta": [
+      1,
+      4,
+      6,
+      -1,
+      5
+    ],
+    "fold_candidate_correct": [
+      355,
+      351,
+      347,
+      349,
+      354
+    ],
+    "fold_reference_correct": [
+      354,
+      347,
+      341,
+      350,
+      349
+    ]
+  },
+  "second_seed": {
+    "outer_seed": 20261101,
+    "oof_n": 2114,
+    "oof_correct": 1752,
+    "oof_reference": 1739,
+    "net_gain": 13,
+    "fold_delta": [
+      -4,
+      9,
+      -1,
+      -1,
+      10
+    ],
+    "fold_candidate_correct": [
+      352,
+      352,
+      354,
+      346,
+      348
+    ],
+    "fold_reference_correct": [
+      356,
+      343,
+      355,
+      347,
+      338
+    ]
+  },
+  "second_seed_passes": false,
+  "validation_data_accessed": false,
+  "test_data_accessed": false,
+  "audit_data_accessed": false,
+  "fitting_or_prediction_performed": false,
+  "selection_lock_signature": "92630669922c4016552fee2a3986be3bf1ff993c5378d3f9e36b68938e940371",
+  "comparison_sha256": "93ee41bccfd7da1eab86e83acc597106bd7012a47cd6d2f422ab2febc915a35d"
+}

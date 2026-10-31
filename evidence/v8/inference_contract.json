@@ -1,0 +1,40 @@
+{
+  "status": "passed",
+  "validation_hard_correct": 313,
+  "validation_all_correct": 756,
+  "n": 798,
+  "hard_n": 355,
+  "full_validation_inference_seconds": 9.238062300020829,
+  "total_check_seconds": 13.310425400006352,
+  "asset_uncompressed_bytes": 1910314,
+  "checks": [
+    {
+      "n": 1,
+      "id_invariance": true,
+      "row_permutation": true,
+      "candidate_permutation": true
+    },
+    {
+      "n": 3,
+      "id_invariance": true,
+      "row_permutation": true,
+      "candidate_permutation": true
+    },
+    {
+      "n": 7,
+      "id_invariance": true,
+      "row_permutation": true,
+      "candidate_permutation": true
+    },
+    {
+      "n": 13,
+      "id_invariance": true,
+      "row_permutation": true,
+      "candidate_permutation": true
+    }
+  ],
+  "numpy_only": true,
+  "reference_loading_blocked": true,
+  "test_accessed": false,
+  "reference_machine_benchmark": false
+}

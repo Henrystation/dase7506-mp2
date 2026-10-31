@@ -1,0 +1,22 @@
+{
+  "stage": "all",
+  "seconds": 164.9048256999813,
+  "context": {
+    "protocol_sha256": "cd37c6edbb374a25918c72fc46a0aa56a6c524f42a85f2fb1ea72c333fbbcdc1",
+    "source_hashes": {
+      "experiments/v8_nonlinear_stack.py": "86d0639fec729fd1dc5b826005089743b7ede0e312af2807c84c2ff866a04eeb",
+      "v8_stack_features.py": "dc00a95ed223936359a9a2d542fdd64099d8314fc0518d2af513d8712ede8e2d",
+      "v8_cat_numeric.py": "d149f62b8f616a177babb2e8795fef216835cf2d0cbfade8c8a247b26ce67d98",
+      "trajectory_features_v6.py": "5e337fe1dd6302f7d094ed24c26904f0f7d4db0782e1776a52f34b4500472c13",
+      "tree_features.py": "782ddab9a77d333537316077a14db51116e9bfa1b98d65c73cc8c6005ebfa7d2",
+      "student_features.py": "d7b993b63058c0b9a9d01dbc2ae38904fa462df91176b0a81e519ad6d3e2963b"
+    },
+    "reference_sha256": "40bdbda614276e2c0d5de3591d4c435c5ee2c27f71a1a37134c02692e1e7c354",
+    "train_hashes": {
+      "gsm8k_train.jsonl": "acc662ed0328b5d38b2dee6f72ddcc956073df4ffb2ef4c4ba668cf445a92003",
+      "candidates/gsm8k_train.jsonl": "38fa2e71c030ae301e6a87366e0700453a56d14abe73f2d14504b9cd0749ed43",
+      "candidates/gsm8k_train.npz": "3bb3d5dcbc71dc64e671c03f965594f91e195acd2be01012476d8b966a6ba1d2"
+    }
+  },
+  "test_accessed": false
+}

@@ -1,0 +1,69 @@
+{
+  "recipe": "fixed_v8_pair4",
+  "outer_seed": 20261031,
+  "inner_seed_base": 20261110,
+  "oof_correct": 1756,
+  "oof_reference": 1741,
+  "oof_n": 2114,
+  "net_gain": 15,
+  "fold_delta": [
+    1,
+    4,
+    6,
+    -1,
+    5
+  ],
+  "fold_candidate_correct": [
+    355,
+    351,
+    347,
+    349,
+    354
+  ],
+  "fold_reference_correct": [
+    354,
+    347,
+    341,
+    350,
+    349
+  ],
+  "matches_historical": true,
+  "historical_expected": {
+    "candidate_correct": 1756,
+    "reference_correct": 1741,
+    "fold_delta": [
+      1,
+      4,
+      6,
+      -1,
+      5
+    ]
+  },
+  "positive_folds": 4,
+  "base_triplets_fitted": 20,
+  "inner_base_triplets": 15,
+  "outer_base_triplets": 5,
+  "heads_fitted": 5,
+  "elapsed_seconds": 245.31266009999672,
+  "base_fit_seconds": 162.24740589989233,
+  "head_fit_seconds": 43.061255999986315,
+  "maximum_native_numpy_error": 0.0,
+  "base_oof_sha256": "40bdbda614276e2c0d5de3591d4c435c5ee2c27f71a1a37134c02692e1e7c354",
+  "oof_sha256": "c31f9c5a90f11ff4410d0596dbe8b96559f4a7ca08d9951689bb80216618df15",
+  "protocol_sha256": "2ea2a64fbe6f57ad78e7f39acd835bc97ea90f3bd010914987a5e2cff713cca9",
+  "fold_record_sha256": {
+    "outer0/record.json": "91b775091a495e13b744f14e9e4f9d7346f647b51cff7e74fc7fe0b751c47ed3",
+    "outer1/record.json": "e8e332a9cda10d320a3d9d6f2a2e317eca71c717e4f6cce95b97daa17772f423",
+    "outer2/record.json": "ff40effe6183a6829fca50c121ebfc851987305921431c2b43182f6919dc636e",
+    "outer3/record.json": "c1cebd0be6921dd5d2b0d9cd105e3fb491cabe1f4b59b8ac3802a39b5c7b6798",
+    "outer4/record.json": "2c91de74780a7e393a5bc4bfcc1a48fae6254d5f87539219dff3259246c0cea9"
+  },
+  "threads": 4,
+  "device": "cpu",
+  "new_parameter_selection": false,
+  "cache_reuse": false,
+  "validation_accessed": false,
+  "test_accessed": false,
+  "audit_accessed": false,
+  "caveat": "Historical development labels are reused. This is a fixed-recipe reproduction, not an untouched holdout or test result."
+}

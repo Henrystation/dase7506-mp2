@@ -1,0 +1,16 @@
+{
+  "reason": "rbf_c1 at fixed 0.25 weight improved validation by one question and first OOF by eight with four positive folds, but failed the preregistered first-stage +10 threshold. It remains unaccepted.",
+  "status": "Exploratory stability check declared before second-seed outcomes; not a retroactive pass of the original first-stage rule.",
+  "candidate": {
+    "family": "pair_kernel",
+    "config": "rbf_c1",
+    "weight": 0.25
+  },
+  "outer_seed": 20261101,
+  "parameters_changed": false,
+  "weight_search_expanded": false,
+  "purpose": "Determine whether an explicitly labeled experimental backup is worth preserving alongside V2. V2 remains the main frozen submission unless evidence is reviewed separately.",
+  "no_test_or_audit_use": true,
+  "ranking_claim": "None; train/validation results cannot establish top-35-percent placement.",
+  "normalization": "Lock reference and kernel scales to first-OOF values; no recalibration or validation changes during second-seed followup."
+}

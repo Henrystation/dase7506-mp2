@@ -1,0 +1,6 @@
+{
+  "version": "mp2_numeric_gbdt_v1",
+  "mode": "raw",
+  "n_features": 1136,
+  "num_trees": 600
+}

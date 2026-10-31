@@ -1,0 +1,20 @@
+{
+  "command": [
+    "D:\\7506\\.conda\\mp1\\python.exe",
+    "-X",
+    "utf8",
+    "-B",
+    "score_predictions.py",
+    "--split",
+    "test",
+    "--predictions",
+    "../evidence/reproduction/test-predictions.json",
+    "--output",
+    "../evidence/reproduction/test-score.json"
+  ],
+  "working_directory": "D:\\7506\\mini_project_2\\project\\final_v8_20261031\\code",
+  "wall_seconds": 0.39348790000076406,
+  "returncode": 0,
+  "stdout": "{\n  \"protocol\": \"dase7506-mp2-open-hard-verifier-v5\",\n  \"split\": \"test\",\n  \"correct\": 395,\n  \"n\": 467,\n  \"accuracy\": 84.58244111349036,\n  \"scoring_seconds\": 0.1491645000060089\n}",
+  "stderr": ""
+}

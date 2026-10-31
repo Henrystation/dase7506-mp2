@@ -1,0 +1,69 @@
+{
+  "status": "passed",
+  "purpose": "Fixed final-model reproduction, not model selection",
+  "score": {
+    "protocol": "dase7506-mp2-open-hard-verifier-v5",
+    "split": "test",
+    "correct": 395,
+    "n": 467,
+    "accuracy": 84.58244111349036,
+    "scoring_seconds": 0.1491645000060089
+  },
+  "prediction": {
+    "command": [
+      "D:\\7506\\.conda\\mp1\\python.exe",
+      "-X",
+      "utf8",
+      "-B",
+      "predict.py",
+      "--method",
+      "submission.py",
+      "--checkpoint",
+      "../checkpoint",
+      "--split",
+      "test",
+      "--output",
+      "../evidence/reproduction/test-predictions.json"
+    ],
+    "working_directory": "D:\\7506\\mini_project_2\\project\\final_v8_20261031\\code",
+    "wall_seconds": 3.19180260002031,
+    "returncode": 0,
+    "stdout": "{\"protocol\": \"dase7506-mp2-open-hard-verifier-v5\", \"split\": \"test\", \"prediction_seconds\": 2.927256499999203}",
+    "stderr": ""
+  },
+  "scoring": {
+    "command": [
+      "D:\\7506\\.conda\\mp1\\python.exe",
+      "-X",
+      "utf8",
+      "-B",
+      "score_predictions.py",
+      "--split",
+      "test",
+      "--predictions",
+      "../evidence/reproduction/test-predictions.json",
+      "--output",
+      "../evidence/reproduction/test-score.json"
+    ],
+    "working_directory": "D:\\7506\\mini_project_2\\project\\final_v8_20261031\\code",
+    "wall_seconds": 0.39348790000076406,
+    "returncode": 0,
+    "stdout": "{\n  \"protocol\": \"dase7506-mp2-open-hard-verifier-v5\",\n  \"split\": \"test\",\n  \"correct\": 395,\n  \"n\": 467,\n  \"accuracy\": 84.58244111349036,\n  \"scoring_seconds\": 0.1491645000060089\n}",
+    "stderr": ""
+  },
+  "combined_wall_seconds": 3.585290500021074,
+  "fresh_processes": true,
+  "threads_per_process": 4,
+  "pythonpath_cleared": true,
+  "reference_machine_benchmark": false,
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.14 | packaged by Anaconda, Inc. | (main, Aug 27 2026, 14:37:13) [MSC v.1942 64 bit (AMD64)]",
+  "exact_historical_ids_and_choices": true,
+  "historical_predictions_sha256": "ff368439a3351e33f15f1bfce1d4f19a8ec65ef7a808ce582e84f3db7017b10e",
+  "prediction_sha256": "1630ace3b3793c611a9976aa249b9bac6ea0ddf37daf0e8622448559d5a849a5",
+  "score_sha256": "e7b11483b8bbc9a0f6eb1cd30fde3ca225de9950ba39bc6a0e8ed9d6bacf45b8",
+  "checkpoint_unchanged": true,
+  "model_retrained": false,
+  "model_selection_or_tuning": false,
+  "per_question_test_error_analysis": false
+}

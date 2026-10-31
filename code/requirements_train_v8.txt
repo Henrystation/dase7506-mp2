@@ -1,0 +1,8 @@
+# Additional development-only dependencies; V2 requirements remain unchanged.
+-r requirements_train_v2.txt
+catboost==1.2.10
+pandas==3.1.0
+six==1.17.0
+graphviz==0.21
+python-dateutil==3.0.0
+tzdata==2026.6

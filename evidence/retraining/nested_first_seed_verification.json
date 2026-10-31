@@ -1,0 +1,51 @@
+{
+  "status": "passed",
+  "checks": {
+    "outer_base_oof_exact": true,
+    "head_oof_exact": true,
+    "head0_weights_exact": true,
+    "head0_projection_exact": true,
+    "outer0_inner0_scores_exact": true,
+    "outer0_inner1_scores_exact": true,
+    "outer0_inner2_scores_exact": true,
+    "head1_weights_exact": true,
+    "head1_projection_exact": true,
+    "outer1_inner0_scores_exact": true,
+    "outer1_inner1_scores_exact": true,
+    "outer1_inner2_scores_exact": true,
+    "head2_weights_exact": true,
+    "head2_projection_exact": true,
+    "outer2_inner0_scores_exact": true,
+    "outer2_inner1_scores_exact": true,
+    "outer2_inner2_scores_exact": true,
+    "head3_weights_exact": true,
+    "head3_projection_exact": true,
+    "outer3_inner0_scores_exact": true,
+    "outer3_inner1_scores_exact": true,
+    "outer3_inner2_scores_exact": true,
+    "head4_weights_exact": true,
+    "head4_projection_exact": true,
+    "outer4_inner0_scores_exact": true,
+    "outer4_inner1_scores_exact": true,
+    "outer4_inner2_scores_exact": true
+  },
+  "first_seed_counts": {
+    "candidate": 1756,
+    "reference": 1741,
+    "delta": [
+      1,
+      4,
+      6,
+      -1,
+      5
+    ]
+  },
+  "elapsed_seconds": 245.31266009999672,
+  "source_was_retrained": true,
+  "old_results_used_for_training": false,
+  "validation_accessed": false,
+  "test_accessed": false,
+  "audit_accessed": false,
+  "train_v8_sha256": "0a125e28c9367bf364abc491936293f658253407137453a4a7347fc149a98d3d",
+  "cross_validate_v8_sha256": "0d0722499d31e124fef609029d418c9385277a528302fb62106772592a3f6c3c"
+}

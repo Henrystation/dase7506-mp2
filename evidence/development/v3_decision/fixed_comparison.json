@@ -1,0 +1,517 @@
+{
+  "protocol": "docs/V3_固定候选评估规则_20261030.md",
+  "fold_seed": 20261031,
+  "reference": {
+    "oof_correct": 1741,
+    "oof_n": 2114,
+    "validation_hard_correct": 312,
+    "validation_all_correct": 755,
+    "fold_correct": [
+      354,
+      347,
+      341,
+      350,
+      349
+    ]
+  },
+  "records": [
+    {
+      "candidate": "neural/group_linear",
+      "candidate_weight": 1.0,
+      "oof_correct": 1736,
+      "oof_n": 2114,
+      "net_gain": -5,
+      "validation_hard_correct": 306,
+      "validation_all_correct": 749,
+      "fold_delta": [
+        0,
+        -1,
+        5,
+        -5,
+        -4
+      ],
+      "reference_only": 60,
+      "candidate_only": 55,
+      "scale": 1.262873888015747,
+      "passes_first_stage": false
+    },
+    {
+      "candidate": "neural/group_linear",
+      "candidate_weight": 0.1,
+      "oof_correct": 1744,
+      "oof_n": 2114,
+      "net_gain": 3,
+      "validation_hard_correct": 311,
+      "validation_all_correct": 754,
+      "fold_delta": [
+        -2,
+        3,
+        2,
+        1,
+        -1
+      ],
+      "reference_only": 5,
+      "candidate_only": 8,
+      "scale": 1.262873888015747,
+      "passes_first_stage": false
+    },
+    {
+      "candidate": "neural/group_linear",
+      "candidate_weight": 0.2,
+      "oof_correct": 1745,
+      "oof_n": 2114,
+      "net_gain": 4,
+      "validation_hard_correct": 308,
+      "validation_all_correct": 751,
+      "fold_delta": [
+        -1,
+        5,
+        0,
+        1,
+        -1
+      ],
+      "reference_only": 13,
+      "candidate_only": 17,
+      "scale": 1.262873888015747,
+      "passes_first_stage": false
+    },
+    {
+      "candidate": "neural/group_linear",
+      "candidate_weight": 0.3,
+      "oof_correct": 1742,
+      "oof_n": 2114,
+      "net_gain": 1,
+      "validation_hard_correct": 306,
+      "validation_all_correct": 749,
+      "fold_delta": [
+        2,
+        5,
+        -2,
+        -1,
+        -3
+      ],
+      "reference_only": 21,
+      "candidate_only": 22,
+      "scale": 1.262873888015747,
+      "passes_first_stage": false
+    },
+    {
+      "candidate": "neural/group_mlp32",
+      "candidate_weight": 1.0,
+      "oof_correct": 1714,
+      "oof_n": 2114,
+      "net_gain": -27,
+      "validation_hard_correct": 308,
+      "validation_all_correct": 751,
+      "fold_delta": [
+        -8,
+        -3,
+        0,
+        -9,
+        -7
+      ],
+      "reference_only": 62,
+      "candidate_only": 35,
+      "scale": 1.0379992723464966,
+      "passes_first_stage": false
+    },
+    {
+      "candidate": "neural/group_mlp32",
+      "candidate_weight": 0.1,
+      "oof_correct": 1742,
+      "oof_n": 2114,
+      "net_gain": 1,
+      "validation_hard_correct": 311,
+      "validation_all_correct": 754,
+      "fold_delta": [
+        0,
+        0,
+        2,
+        0,
+        -1
+      ],
+      "reference_only": 5,
+      "candidate_only": 6,
+      "scale": 1.0379992723464966,
+      "passes_first_stage": false
+    },
+    {
+      "candidate": "neural/group_mlp32",
+      "candidate_weight": 0.2,
+      "oof_correct": 1739,
+      "oof_n": 2114,
+      "net_gain": -2,
+      "validation_hard_correct": 310,
+      "validation_all_correct": 753,
+      "fold_delta": [
+        0,
+        0,
+        2,
+        -1,
+        -3
+      ],
+      "reference_only": 11,
+      "candidate_only": 9,
+      "scale": 1.0379992723464966,
+      "passes_first_stage": false
+    },
+    {
+      "candidate": "neural/group_mlp32",
+      "candidate_weight": 0.3,
+      "oof_correct": 1736,
+      "oof_n": 2114,
+      "net_gain": -5,
+      "validation_hard_correct": 311,
+      "validation_all_correct": 754,
+      "fold_delta": [
+        0,
+        1,
+        1,
+        -2,
+        -5
+      ],
+      "reference_only": 19,
+      "candidate_only": 14,
+      "scale": 1.0379992723464966,
+      "passes_first_stage": false
+    },
+    {
+      "candidate": "neural/group_spread32",
+      "candidate_weight": 1.0,
+      "oof_correct": 1735,
+      "oof_n": 2114,
+      "net_gain": -6,
+      "validation_hard_correct": 306,
+      "validation_all_correct": 749,
+      "fold_delta": [
+        1,
+        1,
+        2,
+        -5,
+        -5
+      ],
+      "reference_only": 57,
+      "candidate_only": 51,
+      "scale": 1.1265575885772705,
+      "passes_first_stage": false
+    },
+    {
+      "candidate": "neural/group_spread32",
+      "candidate_weight": 0.1,
+      "oof_correct": 1743,
+      "oof_n": 2114,
+      "net_gain": 2,
+      "validation_hard_correct": 311,
+      "validation_all_correct": 754,
+      "fold_delta": [
+        1,
+        2,
+        1,
+        0,
+        -2
+      ],
+      "reference_only": 4,
+      "candidate_only": 6,
+      "scale": 1.1265575885772705,
+      "passes_first_stage": false
+    },
+    {
+      "candidate": "neural/group_spread32",
+      "candidate_weight": 0.2,
+      "oof_correct": 1740,
+      "oof_n": 2114,
+      "net_gain": -1,
+      "validation_hard_correct": 310,
+      "validation_all_correct": 753,
+      "fold_delta": [
+        2,
+        3,
+        0,
+        -1,
+        -5
+      ],
+      "reference_only": 9,
+      "candidate_only": 8,
+      "scale": 1.1265575885772705,
+      "passes_first_stage": false
+    },
+    {
+      "candidate": "neural/group_spread32",
+      "candidate_weight": 0.3,
+      "oof_correct": 1745,
+      "oof_n": 2114,
+      "net_gain": 4,
+      "validation_hard_correct": 307,
+      "validation_all_correct": 750,
+      "fold_delta": [
+        2,
+        7,
+        -1,
+        0,
+        -4
+      ],
+      "reference_only": 12,
+      "candidate_only": 16,
+      "scale": 1.1265575885772705,
+      "passes_first_stage": false
+    },
+    {
+      "candidate": "neural/group_mean_pairwise",
+      "candidate_weight": 1.0,
+      "oof_correct": 1738,
+      "oof_n": 2114,
+      "net_gain": -3,
+      "validation_hard_correct": 304,
+      "validation_all_correct": 747,
+      "fold_delta": [
+        -4,
+        -1,
+        5,
+        -1,
+        -2
+      ],
+      "reference_only": 63,
+      "candidate_only": 60,
+      "scale": 1.102196216583252,
+      "passes_first_stage": false
+    },
+    {
+      "candidate": "neural/group_mean_pairwise",
+      "candidate_weight": 0.1,
+      "oof_correct": 1738,
+      "oof_n": 2114,
+      "net_gain": -3,
+      "validation_hard_correct": 311,
+      "validation_all_correct": 754,
+      "fold_delta": [
+        -1,
+        -1,
+        0,
+        0,
+        -1
+      ],
+      "reference_only": 5,
+      "candidate_only": 2,
+      "scale": 1.102196216583252,
+      "passes_first_stage": false
+    },
+    {
+      "candidate": "neural/group_mean_pairwise",
+      "candidate_weight": 0.2,
+      "oof_correct": 1745,
+      "oof_n": 2114,
+      "net_gain": 4,
+      "validation_hard_correct": 308,
+      "validation_all_correct": 751,
+      "fold_delta": [
+        1,
+        3,
+        0,
+        0,
+        0
+      ],
+      "reference_only": 10,
+      "candidate_only": 14,
+      "scale": 1.102196216583252,
+      "passes_first_stage": false
+    },
+    {
+      "candidate": "neural/group_mean_pairwise",
+      "candidate_weight": 0.3,
+      "oof_correct": 1751,
+      "oof_n": 2114,
+      "net_gain": 10,
+      "validation_hard_correct": 308,
+      "validation_all_correct": 751,
+      "fold_delta": [
+        4,
+        4,
+        1,
+        1,
+        0
+      ],
+      "reference_only": 14,
+      "candidate_only": 24,
+      "scale": 1.102196216583252,
+      "passes_first_stage": false
+    },
+    {
+      "candidate": "kernel/best_raw",
+      "candidate_weight": 1.0,
+      "oof_correct": 1711,
+      "oof_n": 2114,
+      "net_gain": -30,
+      "validation_hard_correct": 306,
+      "validation_all_correct": 749,
+      "fold_delta": [
+        -8,
+        -4,
+        -2,
+        -9,
+        -7
+      ],
+      "reference_only": 71,
+      "candidate_only": 41,
+      "scale": 0.2481355518102646,
+      "passes_first_stage": false
+    },
+    {
+      "candidate": "kernel/best_raw",
+      "candidate_weight": 0.1,
+      "oof_correct": 1744,
+      "oof_n": 2114,
+      "net_gain": 3,
+      "validation_hard_correct": 310,
+      "validation_all_correct": 753,
+      "fold_delta": [
+        1,
+        -1,
+        1,
+        0,
+        2
+      ],
+      "reference_only": 3,
+      "candidate_only": 6,
+      "scale": 0.2481355518102646,
+      "passes_first_stage": false
+    },
+    {
+      "candidate": "kernel/best_raw",
+      "candidate_weight": 0.2,
+      "oof_correct": 1740,
+      "oof_n": 2114,
+      "net_gain": -1,
+      "validation_hard_correct": 310,
+      "validation_all_correct": 753,
+      "fold_delta": [
+        0,
+        -1,
+        0,
+        -1,
+        1
+      ],
+      "reference_only": 8,
+      "candidate_only": 7,
+      "scale": 0.2481355518102646,
+      "passes_first_stage": false
+    },
+    {
+      "candidate": "kernel/best_raw",
+      "candidate_weight": 0.3,
+      "oof_correct": 1738,
+      "oof_n": 2114,
+      "net_gain": -3,
+      "validation_hard_correct": 309,
+      "validation_all_correct": 752,
+      "fold_delta": [
+        1,
+        -1,
+        -1,
+        -2,
+        0
+      ],
+      "reference_only": 14,
+      "candidate_only": 11,
+      "scale": 0.2481355518102646,
+      "passes_first_stage": false
+    },
+    {
+      "candidate": "kernel/best_center",
+      "candidate_weight": 1.0,
+      "oof_correct": 1711,
+      "oof_n": 2114,
+      "net_gain": -30,
+      "validation_hard_correct": 305,
+      "validation_all_correct": 748,
+      "fold_delta": [
+        -7,
+        -8,
+        0,
+        -16,
+        1
+      ],
+      "reference_only": 78,
+      "candidate_only": 48,
+      "scale": 0.26426419615745544,
+      "passes_first_stage": false
+    },
+    {
+      "candidate": "kernel/best_center",
+      "candidate_weight": 0.1,
+      "oof_correct": 1742,
+      "oof_n": 2114,
+      "net_gain": 1,
+      "validation_hard_correct": 310,
+      "validation_all_correct": 753,
+      "fold_delta": [
+        1,
+        -1,
+        1,
+        0,
+        0
+      ],
+      "reference_only": 6,
+      "candidate_only": 7,
+      "scale": 0.26426419615745544,
+      "passes_first_stage": false
+    },
+    {
+      "candidate": "kernel/best_center",
+      "candidate_weight": 0.2,
+      "oof_correct": 1740,
+      "oof_n": 2114,
+      "net_gain": -1,
+      "validation_hard_correct": 311,
+      "validation_all_correct": 754,
+      "fold_delta": [
+        0,
+        0,
+        0,
+        -1,
+        0
+      ],
+      "reference_only": 11,
+      "candidate_only": 10,
+      "scale": 0.26426419615745544,
+      "passes_first_stage": false
+    },
+    {
+      "candidate": "kernel/best_center",
+      "candidate_weight": 0.3,
+      "oof_correct": 1739,
+      "oof_n": 2114,
+      "net_gain": -2,
+      "validation_hard_correct": 308,
+      "validation_all_correct": 751,
+      "fold_delta": [
+        0,
+        -1,
+        0,
+        -1,
+        0
+      ],
+      "reference_only": 16,
+      "candidate_only": 14,
+      "scale": 0.26426419615745544,
+      "passes_first_stage": false
+    }
+  ],
+  "selected_for_second_seed": null,
+  "decision": "retain_frozen_v2_no_v3_test",
+  "test_accessed": false,
+  "new_fold_is_independent_holdout": false,
+  "input_sha256": {
+    "runs\\v3_neural\\group_linear_oof.npz": "f4738b8e4232d98c613ad26dcd3f666417a53a38827b2c9e7a4302c5352f1709",
+    "runs\\v3_neural\\group_linear_validation.npz": "45d22cb81888405cf85ffbbeff74c928ce1fb5b89d8a836f7c802300daee109f",
+    "runs\\v3_neural\\group_mlp32_oof.npz": "e7459acf2c25d0bfa498056773c311cf48aa2a1a37705e5079260acc4e10e6da",
+    "runs\\v3_neural\\group_mlp32_validation.npz": "8bac0a812668a4e521d9267b1c2af643376e71de71fe9b50afca40025ae3e062",
+    "runs\\v3_neural\\group_spread32_oof.npz": "33f220228104a4e7fe9ef21bd0c52e7b22865365ac20b8bbc3e7457e58961edd",
+    "runs\\v3_neural\\group_spread32_validation.npz": "4b76ce48d12fadd8947580e8c93f44924432f36587903394b26cf16b4a436296",
+    "runs\\v3_neural\\group_mean_pairwise_oof.npz": "79a45d369ce517fae7f8227b78025d3a756528d1af523acdc77953c8274aa961",
+    "runs\\v3_neural\\group_mean_pairwise_validation.npz": "caad1de6a49272467280abe691d9dc1819de1eaa0afd6d4658ac4e327cc109e7",
+    "runs\\v3_kernel\\best_raw_scores.npz": "49f40342a41a81a29ec1299f48532d89ebfa10eaede013bd68137d53f5f52d6a",
+    "runs\\v3_kernel\\best_raw_validation.npz": "9f491b2a7f3f7d8a6a8079a97fd2edeb9782178a7a9bff5a1b64c51553c03697",
+    "runs\\v3_kernel\\best_center_scores.npz": "cac63b5c20b1abd72a697355f4ebaf4ed1b2fdaa79a96f309840943da4855ebe",
+    "runs\\v3_kernel\\best_center_validation.npz": "b6e4b11158a9f0cff0edb239ea25c2e3a99812239c711053a96a23d9046f340e"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "version": "V8",
+  "selected_head": "pair4",
+  "weight": 1,
+  "decision": "User explicitly selected V8 as final after reviewing the authorized V3-V8 test comparison.",
+  "test_results_known_at_final_selection": true,
+  "stated_selection_basis": "Previously measured train OOF and validation improvements; final designation occurred after retrospective test results were available.",
+  "test_is_no_longer_an_untouched_selection_holdout": true,
+  "fitted_weights_unchanged_after_retrospective_comparison": true,
+  "previous_rule_outcome": "V8 passed first development stage; second seed gained 13 overall but improved only two folds, so it failed the original three-positive-fold gate.",
+  "historical_gate_records_preserved": true,
+  "final_designation_changed_after_review": true,
+  "test_score": {
+    "correct": 395,
+    "n": 467,
+    "accuracy": 84.58244111349036
+  },
+  "validation": {
+    "hard_correct": 313,
+    "hard_n": 355,
+    "all_correct": 756,
+    "n": 798
+  },
+  "original_v2_files_and_archives_preserved": true,
+  "externally_published_or_submitted": false,
+  "no_new_held_out_performance_claim": true
+}

@@ -1,0 +1,2 @@
+# Preserve every frozen payload byte; disable automatic line-ending conversion.
+* -text

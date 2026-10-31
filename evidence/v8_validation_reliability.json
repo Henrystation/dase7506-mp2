@@ -1,0 +1,103 @@
+{
+  "purpose": "Post hoc validation-only descriptive analysis for the report; no model, rule, threshold or hyperparameter update.",
+  "data_split": "validation",
+  "head": "pair4",
+  "blend_weight": 1,
+  "hard_definition": "At least two distinct valid parsed final-answer groups.",
+  "hard_n": 355,
+  "hard_correct": 313,
+  "hard_accuracy": 88.16901408450704,
+  "all_n": 798,
+  "all_correct": 756,
+  "margin_definition": "Difference between the highest and second-highest answer-group means of saved sigmoid-transformed candidate logits. Scores are not calibrated correctness probabilities and groups do not sum to one.",
+  "quartile_method": "numpy.quantile with linear interpolation at 0, .25, .5, .75, 1; bins left-closed/right-open, final bin includes maximum; no label-dependent cutoffs.",
+  "quartile_edges": [
+    0.0025877952575683594,
+    0.3050774931907654,
+    0.5835148394107819,
+    0.7390861846506596,
+    0.8616611510515213
+  ],
+  "margin_quartiles": [
+    {
+      "quartile": 1,
+      "n": 89,
+      "correct": 63,
+      "accuracy": 70.78651685393258,
+      "lower": 0.0025877952575683594,
+      "upper": 0.3050774931907654,
+      "lower_inclusive": true,
+      "upper_inclusive": false
+    },
+    {
+      "quartile": 2,
+      "n": 88,
+      "correct": 78,
+      "accuracy": 88.63636363636364,
+      "lower": 0.3050774931907654,
+      "upper": 0.5835148394107819,
+      "lower_inclusive": true,
+      "upper_inclusive": false
+    },
+    {
+      "quartile": 3,
+      "n": 89,
+      "correct": 83,
+      "accuracy": 93.25842696629213,
+      "lower": 0.5835148394107819,
+      "upper": 0.7390861846506596,
+      "lower_inclusive": true,
+      "upper_inclusive": false
+    },
+    {
+      "quartile": 4,
+      "n": 89,
+      "correct": 89,
+      "accuracy": 100.0,
+      "lower": 0.7390861846506596,
+      "upper": 0.8616611510515213,
+      "lower_inclusive": true,
+      "upper_inclusive": true
+    }
+  ],
+  "distinct_answer_group_counts": [
+    {
+      "distinct_valid_answers": 2,
+      "n": 227,
+      "correct": 209,
+      "accuracy": 92.0704845814978
+    },
+    {
+      "distinct_valid_answers": 3,
+      "n": 108,
+      "correct": 89,
+      "accuracy": 82.4074074074074
+    },
+    {
+      "distinct_valid_answers": 4,
+      "n": 20,
+      "correct": 15,
+      "accuracy": 75.0
+    }
+  ],
+  "v2_comparison": {
+    "v2_hard_correct": 312,
+    "v8_hard_correct": 313,
+    "fixed": 8,
+    "regressed": 7,
+    "unchanged_correct": 305,
+    "unchanged_wrong": 35
+  },
+  "training_performed": false,
+  "new_model_inference": false,
+  "test_data_or_per_question_predictions_read": false,
+  "source_sha256": {
+    "D:\\7506\\mini_project_2\\project\\code\\runs\\v8\\pair4\\validation.npz": "c1c08ea7704019a6db94c82e4b65be682a1b36c1a85f1f64850148ec9bf66d66",
+    "D:\\7506\\mini_project_2\\project\\code\\runs\\v2_final_validation\\validation-predictions.json": "fdebb529ccfd3b35bd73b3de76cfa4f2961c98780e5fe38cabbf7d4b075eaecd",
+    "D:\\7506\\mini_project_2\\project\\code\\data\\gsm8k_validation.jsonl": "ae1522df02497e780909e208ffb4101788e97b4a5eabf883c56bb7fe40d13025",
+    "D:\\7506\\mini_project_2\\project\\code\\data\\candidates\\gsm8k_validation.jsonl": "f2ca7c7c7effa91e6a2e99c597ae13b9369d776f0c08d68622e8671b8229045a",
+    "D:\\7506\\mini_project_2\\project\\code\\data\\candidates\\gsm8k_validation.npz": "a0c6c8e1919bf7e7ffe887b39954e0c905bbd4429b05135fe3fc9f4087a2c881",
+    "D:\\7506\\mini_project_2\\project\\code\\student_features.py": "d7b993b63058c0b9a9d01dbc2ae38904fa462df91176b0a81e519ad6d3e2963b",
+    "D:\\7506\\mini_project_2\\project\\code\\common.py": "aecd10f7ff2e9e82ac5673d34d576e122caac51d2caaa7c7a8aa05906da51f6c"
+  }
+}

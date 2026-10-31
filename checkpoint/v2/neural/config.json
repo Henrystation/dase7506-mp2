@@ -1,0 +1,19 @@
+{
+  "config": {
+    "hidden": 128,
+    "dropout": 0.35,
+    "lr": 0.0005,
+    "wd": 0.15,
+    "batch_size": 128,
+    "epochs": 60,
+    "seed": 20261030,
+    "base_scale": 4.0,
+    "penalty": 0.02,
+    "bce": 0.2,
+    "mode": "both",
+    "loss": "soft"
+  },
+  "epoch": 5,
+  "vote": 0.2,
+  "correct": 307
+}

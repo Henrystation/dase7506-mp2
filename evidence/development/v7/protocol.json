@@ -1,0 +1,116 @@
+{
+  "version": "v7_fixed_new_families",
+  "date": "2026-10-30",
+  "development_splits": [
+    "train",
+    "validation"
+  ],
+  "test_or_audit_prediction": false,
+  "preserve": "V2 model bundle, frozen source files, existing V2 and r2 archives",
+  "sources": [
+    "https://lightgbm.readthedocs.io/en/stable/Parameters.html",
+    "https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html",
+    "https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html"
+  ],
+  "families": {
+    "group_tree": {
+      "names": [
+        "group_lambdarank7",
+        "group_xendcg15"
+      ],
+      "pca": 64,
+      "training": "hard question groups only; per-fold PCA",
+      "rounds": 400
+    },
+    "pair_kernel": {
+      "names": [
+        "rbf_c1",
+        "rbf_c4"
+      ],
+      "pca": 128,
+      "training": "hard question groups only; per-fold PCA, scale, support vectors",
+      "configurations": [
+        {
+          "C": 1,
+          "gamma_factor": 1
+        },
+        {
+          "C": 4,
+          "gamma_factor": 0.5
+        }
+      ]
+    },
+    "gate": {
+      "names": [
+        "gate_l1",
+        "gate_l10"
+      ],
+      "l2": [
+        1,
+        10
+      ],
+      "training": "Complete 5 outer x 3 inner base cross-fitting; fit gate on inner OOF only; full-train gate uses saved 5-fold train OOF; no outer labels in gate fitting",
+      "features": "18 question-level inputs + bias, softmax around frozen V2 weights"
+    }
+  },
+  "outer_seed": 20261031,
+  "blends": {
+    "group_tree": [
+      0.25,
+      0.5,
+      1
+    ],
+    "pair_kernel": [
+      0.25,
+      0.5,
+      1
+    ],
+    "gate": [
+      1
+    ]
+  },
+  "normalization": "Valid-candidate per-question centered scores; reference and new family each divided by train OOF standard deviation; invalid sentinels excluded. Gates preserve V2 scale and use no extra blending.",
+  "first_stage": {
+    "oof_min_gain": 10,
+    "positive_folds": 3,
+    "validation_min": 312,
+    "exception": {
+      "validation": [
+        310,
+        311
+      ],
+      "oof_min_gain": 20
+    }
+  },
+  "second_stage": {
+    "max_candidates": 1,
+    "outer_seed": 20261101,
+    "oof_min_gain": 5,
+    "positive_folds": 3
+  },
+  "selection_priority": [
+    "OOF correct",
+    "validation correct",
+    "smaller added assets"
+  ],
+  "resources": {
+    "inference": "offline NumPy only, 4 CPU threads",
+    "total_inference_assets_max": 16777216,
+    "reference_machine_time_limit_seconds": 30
+  },
+  "notes": [
+    "Development folds reuse previously studied labels and are not a fresh untouched holdout.",
+    "Do not infer leaderboard percentile or new test accuracy from these experiments.",
+    "No increase of grid after viewing scores."
+  ],
+  "public_excerpt": {
+    "status": "Public excerpt of the original dated development protocol; not a byte-identical copy.",
+    "original_sha256": "14b36cfb03190ba1ce1c839fc3dd145d7c53fc4d36795374675ce5f8d436985a",
+    "omitted_fields": [
+      "notes[0]"
+    ],
+    "rewritten_fields": [],
+    "editorial_scope": "Internal source-review discussion omitted; model-purpose wording describes the method only. Experimental configurations, split rules, seeds, thresholds, constraints and historical selection information are unchanged.",
+    "historical_hashes": "Hashes in historical run records refer to the original complete protocol retained outside this public package, not this excerpt."
+  }
+}

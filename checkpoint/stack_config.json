@@ -1,0 +1,28 @@
+{
+  "version": "v8_nested_stack_numpy",
+  "heads": [
+    "pair4"
+  ],
+  "weight": 1,
+  "candidate_scale": 0.2744070887565613,
+  "reference_scale": 0.8949364423751831,
+  "base_specification": {
+    "equations": {
+      "weight": 0.5,
+      "pooling": "max",
+      "oof_scale": 0.24336877465248108
+    },
+    "neural": {
+      "weight": 0.25,
+      "pooling": "max",
+      "oof_scale": 0.9408119916915894
+    },
+    "tree": {
+      "weight": 0.25,
+      "pooling": "mean",
+      "oof_scale": 1.1752545833587646
+    }
+  },
+  "status": "Development candidate; test not evaluated; original V2 preserved",
+  "selection": "Train OOF and validation only"
+}

@@ -1,0 +1,81 @@
+{
+  "recipe": "fixed_v8_pair4",
+  "outer_seed": 20261031,
+  "outer_folds": 5,
+  "inner_folds": 3,
+  "inner_seed_base": 20261110,
+  "head_config": {
+    "loss_function": "PairLogit",
+    "depth": 4,
+    "iterations": 600,
+    "learning_rate": 0.03,
+    "l2_leaf_reg": 20,
+    "random_seed": 20261104,
+    "thread_count": 4,
+    "task_type": "CPU",
+    "bootstrap_type": "Bernoulli",
+    "subsample": 0.8,
+    "random_strength": 1,
+    "border_count": 64,
+    "grow_policy": "SymmetricTree",
+    "allow_writing_files": false,
+    "verbose": false
+  },
+  "base_specification": {
+    "equations": {
+      "weight": 0.5,
+      "pooling": "max",
+      "oof_scale": 0.24336877465248108
+    },
+    "neural": {
+      "weight": 0.25,
+      "pooling": "max",
+      "oof_scale": 0.9408119916915894
+    },
+    "tree": {
+      "weight": 0.25,
+      "pooling": "mean",
+      "oof_scale": 1.1752545833587646
+    }
+  },
+  "candidate_scale": 0.2744070887565613,
+  "reference_scale": 0.8949364423751831,
+  "mixture_weight": 1,
+  "source_sha256": {
+    "train_v8.py": "0a125e28c9367bf364abc491936293f658253407137453a4a7347fc149a98d3d",
+    "common.py": "aecd10f7ff2e9e82ac5673d34d576e122caac51d2caaa7c7a8aa05906da51f6c",
+    "student_features.py": "d7b993b63058c0b9a9d01dbc2ae38904fa462df91176b0a81e519ad6d3e2963b",
+    "student_model.py": "7aa913b107639bc81466ffb45f34e474b1913947a1d1f85da0316c828182b170",
+    "equation_features.py": "cd94b9b390023015a1383cc43c869d3005dc559f9503e4331f10763c2e3e7317",
+    "tree_features.py": "782ddab9a77d333537316077a14db51116e9bfa1b98d65c73cc8c6005ebfa7d2",
+    "train_tree_v2.py": "c96ceeefdceaa2cfc684a920b1c6ecb9e1aabebdbb0a87e13779d76c0be6489b",
+    "experiments/v2_neural.py": "199c82cd20ae1999c6ed7e249bfb43c4f9b109f00df6cab2ae5e3a859e5aee3c",
+    "neural_model.py": "41aab91f060f235151955b448383bc545533b12e481bf678489dd04c07360485",
+    "tree_model.py": "857b253572e31e4e02f3541f5d2a10585d70f6e584f68b79a3ed7cc214b35d63",
+    "ensemble_model.py": "7da54bc4f225c895775f415891261ad5f1bc1febecaab43faefaeaf7fe470516",
+    "trajectory_features_v6.py": "5e337fe1dd6302f7d094ed24c26904f0f7d4db0782e1776a52f34b4500472c13",
+    "v8_stack_features.py": "dc00a95ed223936359a9a2d542fdd64099d8314fc0518d2af513d8712ede8e2d",
+    "v8_cat_numeric.py": "d149f62b8f616a177babb2e8795fef216835cf2d0cbfade8c8a247b26ce67d98",
+    "v8_stack_model.py": "dcfc1ec1da0f884e0e23497392e3b2c9f4f9966e6fd682fa0363e5ed5e8e48bd",
+    "cross_validate_v8.py": "0d0722499d31e124fef609029d418c9385277a528302fb62106772592a3f6c3c"
+  },
+  "train_sha256": {
+    "gsm8k_train.jsonl": "acc662ed0328b5d38b2dee6f72ddcc956073df4ffb2ef4c4ba668cf445a92003",
+    "candidates/gsm8k_train.jsonl": "38fa2e71c030ae301e6a87366e0700453a56d14abe73f2d14504b9cd0749ed43",
+    "candidates/gsm8k_train.npz": "3bb3d5dcbc71dc64e671c03f965594f91e195acd2be01012476d8b966a6ba1d2"
+  },
+  "versions": {
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "torch": "2.7.1+cu126",
+    "lightgbm": "4.7.0",
+    "catboost": "1.2.10"
+  },
+  "threads": 4,
+  "device": "cpu",
+  "cache_reuse": false,
+  "validation_accessed": false,
+  "test_accessed": false,
+  "audit_accessed": false
+}

@@ -1,0 +1,102 @@
+{
+  "date": "2026-10-31",
+  "version": "v8_nonlinear_nested_stack",
+  "purpose": "Nonlinear out-of-fold stacking using local base verifiers and input features.",
+  "training_splits": [
+    "train"
+  ],
+  "development": [
+    "validation"
+  ],
+  "test_and_audit": "Never loaded or scored",
+  "outer_seed": 20261031,
+  "inner_base_cache": "Existing V7 5 outer x 3 inner OOF of frozen V2 recipe, signature/hash/index verified",
+  "features": "Own tree107 + independent trajectory20, question centered differences, PCA32 raw/difference/context, V2 component raw/group evidence; PCA fit on outer training inputs only",
+  "configurations": [
+    {
+      "name": "pair4",
+      "objective": "PairLogit",
+      "depth": 4,
+      "iterations": 600,
+      "learning_rate": 0.03,
+      "l2_leaf_reg": 20
+    },
+    {
+      "name": "binary6",
+      "objective": "Logloss",
+      "depth": 6,
+      "iterations": 600,
+      "learning_rate": 0.03,
+      "l2_leaf_reg": 20
+    }
+  ],
+  "common": {
+    "random_seed": 20261104,
+    "thread_count": 4,
+    "task_type": "CPU",
+    "bootstrap_type": "Bernoulli",
+    "subsample": 0.8,
+    "random_strength": 1,
+    "border_count": 64,
+    "grow_policy": "SymmetricTree",
+    "allow_writing_files": false
+  },
+  "score": "Sigmoid logits then mean within parsed answer; fixed heads separately and equal-probability average",
+  "head_options": [
+    "pair4",
+    "binary6",
+    "mean"
+  ],
+  "blend_weights": [
+    0.25,
+    0.5,
+    1
+  ],
+  "normalization": "Center only valid candidates; divide each model by its first-seed train OOF std. Reference same normalization. No new weights or hyperparameters after viewing results.",
+  "acceptance": {
+    "oof_min_gain": 10,
+    "positive_folds": 3,
+    "validation_min": 312,
+    "exception": {
+      "validation": [
+        310,
+        311
+      ],
+      "oof_min_gain": 20
+    }
+  },
+  "followup": {
+    "max_candidates": 1,
+    "second_outer_seed": 20261101,
+    "min_net_gain": 5,
+    "min_positive_folds": 3
+  },
+  "resources": {
+    "inference_assets_max_bytes": 16777216,
+    "inference": "Offline NumPy only CPU4threads",
+    "reference_evaluation_seconds_max": 30
+  },
+  "preservation": "Existing V2 files, original V2 ZIPs and r2 archives remain unchanged",
+  "primary_references": [
+    "https://catboost.ai/docs/en/concepts/loss-functions-ranking",
+    "https://catboost.ai/docs/en/features/export-model-to-json",
+    "https://arxiv.org/abs/1706.09516"
+  ],
+  "caveats": [
+    "Inner-training sample sizes differ from full-train base OOF; no held labels used for fitting.",
+    "Frozen V2 model/scales were historically selected on development data, so this is a conditional stability check, not a never-touched holdout.",
+    "Repeated validation results do not establish test improvement or leaderboard percentile."
+  ],
+  "public_excerpt": {
+    "status": "Public excerpt of the original dated development protocol; not a byte-identical copy.",
+    "original_sha256": "cd37c6edbb374a25918c72fc46a0aa56a6c524f42a85f2fb1ea72c333fbbcdc1",
+    "omitted_fields": [
+      "reuse"
+    ],
+    "rewritten_fields": [
+      "purpose"
+    ],
+    "editorial_scope": "Internal source-review discussion omitted; model-purpose wording describes the method only. Experimental configurations, split rules, seeds, thresholds, constraints and historical selection information are unchanged.",
+    "historical_hashes": "Hashes in historical run records refer to the original complete protocol retained outside this public package, not this excerpt."
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "scope": "Fabricated one-question input; no course split loaded or scored",
+  "entry": "code/submission.py",
+  "checkpoint_argument": "../checkpoint",
+  "working_directory": "code",
+  "pythonpath_cleared": true,
+  "numpy_version": "2.5.3",
+  "threads_environment": 4,
+  "valid_integer_candidate_output": true,
+  "all_custom_module_imports_resolved_inside_package_code": true,
+  "torch_sklearn_lightgbm_catboost_not_imported": true,
+  "test_or_audit_prediction_or_scoring": false
+}

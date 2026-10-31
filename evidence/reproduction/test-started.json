@@ -1,0 +1,7 @@
+{
+  "started_at": "2026-10-31T18:40:19.874574+08:00",
+  "purpose": "One fresh-process reproduction of the already-final fixed V8; no model selection or parameter changes",
+  "python": "D:\\7506\\.conda\\mp1\\python.exe",
+  "pythonpath_cleared": true,
+  "threads": 4
+}
